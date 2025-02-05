@@ -529,20 +529,23 @@
             }
         };
         function menuInit() {
+            const nav = document.querySelector(".header__nav");
+            const burger = document.querySelector(".icon-menu");
             if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
                 if (bodyLockStatus && e.target.closest(".icon-menu")) {
                     bodyLockToggle();
                     document.documentElement.classList.toggle("menu-open");
-                    const nav = document.querySelector(".header__nav");
-                    const burger = document.querySelector(".icon-menu");
-                    document.body;
                     nav.classList.toggle("active");
                     burger.classList.toggle("open");
                 }
             }));
         }
         function menuClose() {
+            const nav = document.querySelector(".header__nav");
+            const burger = document.querySelector(".icon-menu");
             bodyUnlock();
+            nav.classList.remove("active");
+            burger.classList.remove("open");
             document.documentElement.classList.remove("menu-open");
         }
         function FLS(message) {
