@@ -849,11 +849,150 @@ html.menu-open .header__actions {
   backdrop-filter: blur(0)
 }
 .hero {
-  height: 100vh;
-  background: url(../img/1.webp) center/cover no-repeat;
-  display: flex;
+  color: var(--white,#fff);
+  height: 100%;
+  min-height: 100svh;
+  width: 100%;
   padding: 1rem;
-  transition: all .3s ease
+  padding-top: 11.25rem;
+  transition: all .3s ease;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  gap: 3.125rem
+}
+.hero__vid {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2
+}
+.hero__video {
+  width: 100%;
+  aspect-ratio: 1950/900
+}
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+  height: 100%;
+  width: 100%
+}
+.hero__img {
+  aspect-ratio: 320/568
+}
+.hero__content {
+  max-width: 37.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+.hero__title {
+  margin-bottom: 1.5rem
+}
+.hero__text {
+  color: var(--white,#fff)
+}
+.hero__body {
+  max-width: 35rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: end
+}
+.hero__slider {
+  margin-bottom: 1.5rem
+}
+.hero__slide {
+  border-radius: .5rem;
+  background: var(--dark-burg-opacity,rgba(116,39,62,.6))
+}
+.hero__more {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  align-items: end
+}
+.hero__actions {
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  display: flex
+}
+.hero__left {
+  display: grid;
+  max-width: 21.6875rem
+}
+.hero__gallery {
+  border-radius: 1rem;
+  background: var(--dark-burg-opacity,rgba(116,39,62,.6));
+  padding: .5rem;
+  backdrop-filter: blur(17.5px)
+}
+.hero__subtitle {
+  color: var(--white,#fff);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: .625rem;
+  line-height: 130%;
+  margin-bottom: 1.6875rem
+}
+.hero__g-photos {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: .5rem
+}
+.hero__g-image {
+  border-radius: .5rem;
+  max-width: 10.0625rem
+}
+.hero__spec {
+  border-radius: 1rem;
+  background: var(--dark-burg-opacity,rgba(116,39,62,.6));
+  padding: .5rem;
+  backdrop-filter: blur(17.5px)
+}
+.hero__s-photos {
+  align-items: end;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-auto-rows: repeat(2,1fr);
+  gap: .5rem
+}
+.hero__s-image {
+  max-width: 5.4375rem;
+  border-radius: .5rem;
+  aspect-ratio: 1/1
+}
+.services-hero {
+  border-radius: 1rem;
+  padding: .5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: .7fr 1fr
+}
+.services-hero__image {
+  max-width: 14rem;
+  aspect-ratio: 1/1;
+  border-radius: 8px
+}
+.services-hero__title {
+  color: var(--white,#fff);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 1rem
+}
+.services-hero__text {
+  color: var(--white,#fff);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: .5rem
 }
 .swiper {
   overflow: hidden
@@ -895,6 +1034,16 @@ html.menu-open .header__actions {
     display: none;
     pointer-events: none
   }
+  .hero::before {
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4)
+  }
 }
 @media (min-width:117em) {
   .title {
@@ -902,6 +1051,11 @@ html.menu-open .header__actions {
   }
   .subtitle {
     font-size: 3rem
+  }
+}
+@media (max-width:48em) {
+  .hero {
+    grid-template-columns: auto
   }
 }
 @media (max-width:61.99875em) {
@@ -964,6 +1118,15 @@ html.menu-open .header__actions {
     flex-direction: column;
     justify-content: flex-start
   }
+  .hero__vid {
+    display: none
+  }
+  .hero__video {
+    aspect-ratio: 3/1
+  }
+  .hero__image {
+    display: block
+  }
 }
 @media (max-width:22.5em) {
   .title {
@@ -984,6 +1147,14 @@ html.menu-open .header__actions {
 @media (min-width:48em)and (max-width:120em) {
   .header__nav .header__logo img {
     margin-right: clamp(1.25rem ,-5.8333333333rem + 14.7569444444vw ,11.875rem)
+  }
+  .hero {
+    padding-left: clamp(1rem ,-7.0833333333rem + 16.8402777778vw ,13.125rem)
+  }
+}
+@media (min-width:64em)and (max-width:120em) {
+  .hero {
+    padding-top: clamp(5rem ,-2.1428571429rem + 11.1607142857vw ,11.25rem)
   }
 }
 @media (any-hover:hover) {
