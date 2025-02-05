@@ -110,14 +110,14 @@ h6 {
   min-width: 0
 }
 [class*=__container] {
-  max-width: 116.875rem;
+  max-width: 117rem;
   margin: 0 auto;
-  padding: 0 .9375rem
+  padding: 0 1rem
 }
 [class*="--gc"] {
   display: grid;
   min-width: 0;
-  grid-template-columns: .9375rem 1fr minmax(auto,115rem) 1fr .9375rem
+  grid-template-columns: 1rem 1fr minmax(auto,115rem) 1fr 1rem
 }
 [class*="--gc"]>* {
   min-width: 0;
@@ -766,7 +766,7 @@ body {
   gap: 2rem;
   border-radius: 1rem;
   background: var(--dark-burg-opacity,rgba(116,39,62,.6));
-  backdrop-filter: blur(17.5px);
+  transition: all .3s;
   padding: 1.5rem
 }
 .header__links {
@@ -852,11 +852,8 @@ html.menu-open .header__actions {
   height: 100vh;
   background: url(../img/1.webp) center/cover no-repeat;
   display: flex;
-  padding: .9375rem;
+  padding: 1rem;
   transition: all .3s ease
-}
-.hero.menu-open .header {
-  padding-top: 31.25rem
 }
 .swiper {
   overflow: hidden
@@ -899,7 +896,7 @@ html.menu-open .header__actions {
     pointer-events: none
   }
 }
-@media (min-width:116.875em) {
+@media (min-width:117em) {
   .title {
     font-size: 3.5rem
   }
@@ -912,7 +909,7 @@ html.menu-open .header__actions {
     justify-content: flex-start
   }
   .header__nav.active {
-    padding: .9375rem .9375rem
+    padding: 1rem 1rem
   }
   .header__nav a {
     font-size: 1.5rem
@@ -923,7 +920,12 @@ html.menu-open .header__actions {
     width: 100%
   }
   .header {
-    padding: 0 .9375rem
+    padding: 0 1rem
+  }
+  .header__actions {
+    top: 1rem;
+    right: 1rem;
+    padding: .75rem 1rem
   }
   .header__links {
     padding-top: 5.625rem;
@@ -937,7 +939,7 @@ html.menu-open .header__actions {
   }
   .header__nav .header__logo img {
     display: none;
-    margin-right: .9375rem
+    margin-right: 1rem
   }
   .header__nav a {
     font-size: 1.875rem
@@ -971,12 +973,12 @@ html.menu-open .header__actions {
     font-size: 2rem
   }
 }
-@media (min-width:22.5em)and (max-width:116.875em) {
+@media (min-width:22.5em)and (max-width:117em) {
   .title {
-    font-size: clamp(2rem ,1.642384106rem + 1.5894039735vw ,3.5rem)
+    font-size: clamp(2rem ,1.6428571429rem + 1.5873015873vw ,3.5rem)
   }
   .subtitle {
-    font-size: clamp(2rem ,1.761589404rem + 1.059602649vw ,3rem)
+    font-size: clamp(2rem ,1.7619047619rem + 1.0582010582vw ,3rem)
   }
 }
 @media (min-width:48em)and (max-width:120em) {
@@ -999,5 +1001,8 @@ html.menu-open .header__actions {
   }
   .header__nav a:hover {
     color: #fff
+  }
+  .icon-menu:hover {
+    opacity: .8
   }
 }
