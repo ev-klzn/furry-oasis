@@ -772,20 +772,29 @@ body {
 .header__links {
   display: flex;
   flex-wrap: wrap;
-  gap: .9375rem;
+  gap: 1.5625rem;
   justify-content: space-between
 }
 .header__nav {
-  padding: 1.875rem 2.5rem;
-  display: none;
+  display: grid;
   width: 100%;
   gap: 1.875rem;
   transition: all .3s;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
   justify-content: space-between;
-  grid-template-columns: auto 1fr
+  grid-template-columns: auto 1fr 55px;
+  height: 0
 }
 .header__nav.active {
-  display: grid
+  padding: 1.875rem 2.5rem;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  height: auto;
+  opacity: 1;
+  pointer-events: all
 }
 .header__nav .header__logo img {
   width: 8rem
@@ -811,26 +820,32 @@ body {
   background: #fff;
   transition: all .3s ease
 }
-body .open div:nth-child(1) {
-  -webkit-transform: translateY(.5rem) rotate(45deg);
-  transform: translateY(.5rem) rotate(45deg)
-}
-body .open div:nth-child(2) {
-  opacity: 0
-}
-body .open div:nth-child(3) {
-  -webkit-transform: translateY(-.5rem) rotate(-45deg);
-  transform: translateY(-.5rem) rotate(-45deg)
-}
-body.menu-open {
+body {
   transition: all .3s
 }
+body .header__burger {
+  transition: all .3s
+}
+body .open div:nth-child(1) {
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+body .open div:nth-child(2) {
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+body .open div:nth-child(3) {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
 body.menu-open .header__nav {
-  padding-top: 7.5rem
+  padding-top: 3.5625rem
 }
 body.menu-open .header__actions {
   border-radius: 0;
-  background: 0 0;
+  background: rgba(0,0,0,0);
   backdrop-filter: blur(0)
 }
 .hero {
@@ -839,6 +854,9 @@ body.menu-open .header__actions {
   display: flex;
   padding: .9375rem;
   transition: all .3s ease
+}
+.hero.menu-open .header {
+  padding-top: 31.25rem
 }
 .swiper {
   overflow: hidden
@@ -872,10 +890,12 @@ body.menu-open .header__actions {
 }
 @media (min-width:47.99875em) {
   body.menu-open .hero {
+    margin-top: 4.375rem;
     padding-top: 4.375rem
   }
   body.menu-open .header__actions .header__logo {
     opacity: 0;
+    display: none;
     pointer-events: none
   }
 }
@@ -890,6 +910,9 @@ body.menu-open .header__actions {
 @media (max-width:61.99875em) {
   .header__links {
     justify-content: flex-start
+  }
+  .header__nav.active {
+    padding: .9375rem .9375rem
   }
   .header__nav a {
     font-size: 1.5rem
@@ -928,11 +951,14 @@ body.menu-open .header__actions {
     width: 100%
   }
   body.menu-open .header__nav {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     transition: all .3s;
-    background: var(--dark-burgundi);
+    background-color: var(--dark-burgundi);
     padding-top: 0;
     display: flex;
-    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
     flex-direction: column;
     justify-content: flex-start
   }
