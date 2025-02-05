@@ -20,7 +20,7 @@
 	<meta name="description" content="Furry Oasis - Furry Oasis">
 	<meta name="robots" content="noindex, nofollow">
 	<title>Furry Oasis - Furry Oasis</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250205103305">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250205110538">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -105,23 +105,23 @@
 				<a data-goto-header data-goto=".hero" href="#" class="header__logo">
 					<img class="header__logo-img ibg ibg--contain" src="img/logo.svg " alt="logo" />
 				</a>
-				<button aria-label="menu" class="header__burger" onclick="toggleMenu()">
+				<!-- onclick="toggleMenu()" -->
+				<button aria-label="menu" class="icon-menu">
 					<div></div>
 					<div></div>
 					<div></div>
 				</button>
 			</div>
-			<script>
-				function toggleMenu() {
-					const nav = document.querySelector(".header__nav");
-					const burger = document.querySelector(".header__burger");
-					const body = document.body;
-
-					nav.classList.toggle("active");
-					burger.classList.toggle("open");
-					body.classList.toggle("menu-open");
-				}
-			</script>
+			<!-- <script>
+    function toggleMenu() {
+      // const nav = document.querySelector(".header__nav");
+      // const burger = document.querySelector(".icon-menu");
+      // const body = document.body;
+      // nav.classList.toggle("active");
+      // burger.classList.toggle("open");
+      // body.classList.toggle("menu-open");
+    }
+  </script> -->
 		</header>
 
 		<main class="page">
@@ -679,6 +679,7 @@
 			minima facere modi, placeat, laboriosam ad quaerat natus, voluptates est
 			ullam corporis impedit deleniti. Accusantium vel a quo, quae
 			perspiciatis, rem consectetur omnis adipisci dignissimos, id in?
+			<div class="about">sdfsdf</div>
 			<!-- <div><div class="common">
   <h1 class="title title_link">title</h1>
   <h2 class="subtitle">subtitle</h2>
@@ -692,7 +693,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250205103305"></script>
+	<script src="js/app.min.js?_v=20250205110538"></script>
 </body>
 
 </html>
