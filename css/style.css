@@ -132,6 +132,7 @@ h6 {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+  white-space: nowrap;
   transition: all .3s;
   justify-content: center;
   align-items: center;
@@ -758,8 +759,8 @@ body {
 .header__actions {
   backdrop-filter: blur(17.5px);
   position: fixed;
-  top: 1.5625rem;
-  right: 1.5625rem;
+  top: 2.5rem;
+  right: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -854,7 +855,8 @@ html.menu-open .header__actions {
   min-height: 100svh;
   width: 100%;
   padding: 1rem;
-  padding-top: 11.25rem;
+  padding-right: 2.5rem;
+  padding-bottom: 2.5rem;
   transition: all .3s ease;
   display: grid;
   grid-template-columns: auto auto;
@@ -870,28 +872,13 @@ html.menu-open .header__actions {
 }
 .hero__video {
   width: 100%;
-  aspect-ratio: 1950/900
-}
-.hero__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  display: none;
-  height: 100%;
-  width: 100%
-}
-.hero__img {
-  aspect-ratio: 320/568
+  aspect-ratio: 1950/700
 }
 .hero__content {
   max-width: 37.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between
-}
-.hero__title {
-  margin-bottom: 1.5rem
 }
 .hero__text {
   color: var(--white,#fff)
@@ -902,8 +889,13 @@ html.menu-open .header__actions {
   grid-template-columns: 1fr;
   align-items: end
 }
+.hero__reverse {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem
+}
 .hero__slider {
-  margin-bottom: 1.5rem
+  max-width: 35rem
 }
 .hero__slide {
   border-radius: .5rem;
@@ -911,33 +903,37 @@ html.menu-open .header__actions {
 }
 .hero__more {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr auto;
   gap: 1rem;
   align-items: end
 }
 .hero__actions {
   justify-content: space-between;
-  margin-bottom: 1.5rem;
-  display: flex
+  display: flex;
+  gap: .3125rem
 }
 .hero__left {
   display: grid;
   max-width: 21.6875rem
 }
 .hero__gallery {
+  max-width: 21.6875rem;
   border-radius: 1rem;
   background: var(--dark-burg-opacity,rgba(116,39,62,.6));
   padding: .5rem;
   backdrop-filter: blur(17.5px)
 }
 .hero__subtitle {
+  padding: .5rem;
   color: var(--white,#fff);
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
-  margin-bottom: .625rem;
-  line-height: 130%;
-  margin-bottom: 1.6875rem
+  line-height: 130%
+}
+.hero__subtitle--s {
+  padding: 1rem;
+  margin-bottom: .875rem
 }
 .hero__g-photos {
   display: grid;
@@ -952,13 +948,13 @@ html.menu-open .header__actions {
   border-radius: 1rem;
   background: var(--dark-burg-opacity,rgba(116,39,62,.6));
   padding: .5rem;
-  backdrop-filter: blur(17.5px)
+  backdrop-filter: blur(17.5px);
+  max-width: 12.3125rem
 }
 .hero__s-photos {
   align-items: end;
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  grid-auto-rows: repeat(2,1fr);
   gap: .5rem
 }
 .hero__s-image {
@@ -973,18 +969,25 @@ html.menu-open .header__actions {
   gap: 1rem;
   grid-template-columns: .7fr 1fr
 }
+.services-hero__header {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .3125rem;
+  justify-content: space-between
+}
 .services-hero__image {
   max-width: 14rem;
   aspect-ratio: 1/1;
-  border-radius: 8px
+  border-radius: .5rem
 }
 .services-hero__title {
   color: var(--white,#fff);
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 130%;
-  margin-bottom: 1rem
+  line-height: 130%
 }
 .services-hero__text {
   color: var(--white,#fff);
@@ -1026,7 +1029,7 @@ html.menu-open .header__actions {
 }
 @media (min-width:47.99875em) {
   html.menu-open .hero {
-    margin-top: 4.375rem;
+    margin-top: 6.875rem;
     padding-top: 4.375rem
   }
   html.menu-open .header__actions .header__logo {
@@ -1052,10 +1055,54 @@ html.menu-open .header__actions {
   .subtitle {
     font-size: 3rem
   }
+  .hero__title {
+    margin-bottom: 1.5rem
+  }
+  .hero__slider {
+    margin-bottom: 1.5rem
+  }
+  .hero__actions {
+    margin-bottom: 1.5rem
+  }
+  .hero__subtitle--s {
+    margin-bottom: .875rem
+  }
+}
+@media (min-width:215em) {
+  .hero {
+    padding-top: 11.25rem
+  }
+  .hero {
+    padding-left: 13.125rem
+  }
+}
+@media (max-width:90em) {
+  .header__actions {
+    top: 1rem;
+    right: 1rem;
+    padding: .75rem 1rem
+  }
+  .hero {
+    padding-right: 1rem;
+    padding-bottom: 1rem
+  }
+}
+@media (max-width:75em) {
+  .hero {
+    background: url(../img/hero/hero.webp) center/cover no-repeat
+  }
+  .hero__vid {
+    display: none
+  }
+}
+@media (max-width:64em) {
+  .hero {
+    padding-top: 6.875rem
+  }
 }
 @media (max-width:48em) {
   .hero {
-    grid-template-columns: auto
+    padding-left: 1rem
   }
 }
 @media (max-width:61.99875em) {
@@ -1068,6 +1115,38 @@ html.menu-open .header__actions {
   .header__nav a {
     font-size: 1.5rem
   }
+  .hero {
+    grid-template-columns: auto
+  }
+  .hero__content {
+    max-width: 100%
+  }
+  .hero__bottom {
+    display: none
+  }
+  .hero__body {
+    max-width: 100%
+  }
+  .hero__reverse {
+    flex-direction: column-reverse
+  }
+  .hero__slider {
+    max-width: 100%
+  }
+  .hero__more {
+    grid-template-columns: 1fr auto
+  }
+  .hero__g-image {
+    max-width: 100%
+  }
+  .hero__s-image {
+    max-width: 9.375rem;
+    max-width: 100%
+  }
+  .services-hero {
+    grid-template-columns: auto auto;
+    align-items: center
+  }
 }
 @media (max-width:47.99875em) {
   .button {
@@ -1075,11 +1154,6 @@ html.menu-open .header__actions {
   }
   .header {
     padding: 0 1rem
-  }
-  .header__actions {
-    top: 1rem;
-    right: 1rem;
-    padding: .75rem 1rem
   }
   .header__links {
     padding-top: 5.625rem;
@@ -1118,14 +1192,38 @@ html.menu-open .header__actions {
     flex-direction: column;
     justify-content: flex-start
   }
-  .hero__vid {
-    display: none
+  .hero__left {
+    max-width: 100%
   }
-  .hero__video {
-    aspect-ratio: 3/1
+  .hero__gallery {
+    max-width: 100%
   }
-  .hero__image {
-    display: block
+  .hero__subtitle--s {
+    padding: .5rem;
+    margin-bottom: 0
+  }
+  .hero__spec {
+    max-width: 100%
+  }
+  .hero__s-image {
+    max-width: 100%
+  }
+  .services-hero__header button svg {
+    width: 1.125rem
+  }
+  .services-hero__image {
+    max-width: 100%
+  }
+}
+@media (max-width:29.99875em) {
+  .hero__more {
+    grid-template-columns: auto
+  }
+}
+@media (max-width:26.5625em) {
+  .button {
+    padding-left: .9375rem;
+    padding-right: .9375rem
   }
 }
 @media (max-width:22.5em) {
@@ -1135,6 +1233,18 @@ html.menu-open .header__actions {
   .subtitle {
     font-size: 2rem
   }
+  .hero__title {
+    margin-bottom: .75rem
+  }
+  .hero__slider {
+    margin-bottom: .75rem
+  }
+  .hero__actions {
+    margin-bottom: .75rem
+  }
+  .hero__subtitle--s {
+    margin-bottom: .1875rem
+  }
 }
 @media (min-width:22.5em)and (max-width:117em) {
   .title {
@@ -1143,18 +1253,32 @@ html.menu-open .header__actions {
   .subtitle {
     font-size: clamp(2rem ,1.7619047619rem + 1.0582010582vw ,3rem)
   }
+  .hero__title {
+    margin-bottom: clamp(.75rem ,.5714285714rem + .7936507937vw ,1.5rem)
+  }
+  .hero__slider {
+    margin-bottom: clamp(.75rem ,.5714285714rem + .7936507937vw ,1.5rem)
+  }
+  .hero__actions {
+    margin-bottom: clamp(.75rem ,.5714285714rem + .7936507937vw ,1.5rem)
+  }
+  .hero__subtitle--s {
+    margin-bottom: clamp(.1875rem ,.0238095238rem + .7275132275vw ,.875rem)
+  }
 }
 @media (min-width:48em)and (max-width:120em) {
   .header__nav .header__logo img {
     margin-right: clamp(1.25rem ,-5.8333333333rem + 14.7569444444vw ,11.875rem)
   }
+}
+@media (min-width:64em)and (max-width:215em) {
   .hero {
-    padding-left: clamp(1rem ,-7.0833333333rem + 16.8402777778vw ,13.125rem)
+    padding-top: clamp(6.875rem ,5.0206953642rem + 2.8973509934vw ,11.25rem)
   }
 }
-@media (min-width:64em)and (max-width:120em) {
+@media (min-width:48em)and (max-width:215em) {
   .hero {
-    padding-top: clamp(5rem ,-2.1428571429rem + 11.1607142857vw ,11.25rem)
+    padding-left: clamp(1rem ,-2.4850299401rem + 7.2604790419vw ,13.125rem)
   }
 }
 @media (any-hover:hover) {
