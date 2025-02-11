@@ -2264,6 +2264,10 @@ button.swiper-pagination-bullet {
   .hero__g-image {
     aspect-ratio: 1/1.48
   }
+  .services .services__list {
+    gap: 1rem;
+    grid-template-columns: repeat(2,1fr)
+  }
 }
 @media (max-width:73.6875em) {
   .hero__g-image {
@@ -2353,9 +2357,6 @@ button.swiper-pagination-bullet {
   }
   .about__image {
     max-width: 100%
-  }
-  .services .services__list {
-    grid-template-columns: repeat(2,1fr)
   }
 }
 @media (max-width:47.99875em) {
@@ -2465,7 +2466,6 @@ button.swiper-pagination-bullet {
     margin-right: 0
   }
   .services .services__list {
-    gap: 1rem;
     grid-template-columns: auto
   }
   .services .service__image {
