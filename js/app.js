@@ -541,9 +541,12 @@
             }));
         }
         function menuClose() {
-            document.querySelector(".header__nav");
-            document.querySelector(".icon-menu");
+            const nav = document.querySelector(".header__nav");
+            const burger = document.querySelector(".icon-menu");
             bodyUnlock();
+            nav.classList.remove("active");
+            burger.classList.remove("open");
+            document.documentElement.classList.remove("menu-open");
         }
         function FLS(message) {
             setTimeout((() => {
