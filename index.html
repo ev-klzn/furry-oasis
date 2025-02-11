@@ -20,7 +20,7 @@
 	<meta name="description" content="Furry Oasis - Furry Oasis">
 	<meta name="robots" content="noindex, nofollow">
 	<title>Furry Oasis - Furry Oasis</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250210150957">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250211155315">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -56,7 +56,7 @@
 				</ul>
 			</nav>
 
-			<div class="header__actions">
+			<div data-lp class="header__actions">
 				<a data-goto-header data-goto=".hero" href="#" class="header__logo">
 					<img class="header__logo-img ibg ibg--contain" src="img/logo.svg " alt="logo" />
 				</a>
@@ -246,34 +246,27 @@
 					</div>
 					<div class="about__content">
 						<div class="about__body">
-							<div class="about__text text">
-								<p>
-									We take pride in being a premium grooming salon dedicated to
-									your pet’s care. Our expert groomers provide more than just
-									a trim—we offer a luxurious, stress-free experience tailored
-									to each pet’s unique needs. Using high-quality products and
-									gentle techniques, we ensure every bath, styling, and spa
-									treatment leaves your furry friend feeling refreshed and
-									looking their best. With a focus on comfort, safety, and
-									personalized care, we make every visit a pampering retreat
-									because your pet deserves nothing less than premium
-									treatment
-								</p>
-								<!-- <p>
-                    We take pride in being a premium grooming salon dedicated to
-                    your pet’s care. Our expert groomers provide more than just
-                    a trim—we offer a luxurious, stress-free experience tailored
-                    to each pet’s unique needs. Using high-quality products and
-                    gentle techniques, we ensure every bath, styling, and spa
-                    treatment leaves your furry friend feeling refreshed and
-                    looking their best. With a focus on comfort, safety, and
-                    personalized care, we make every visit a pampering retreat
-                    because your pet deserves nothing less than premium
-                    treatment
-                  </p> -->
+							<div class="about__info">
+								<div class="about__text text">
+									<p>
+										We take pride in being a premium grooming salon dedicated
+										to your pet’s care. Our expert groomers provide more than
+										just a trim—we offer a luxurious, stress-free experience
+										tailored to each pet’s unique needs. Using high-quality
+										products and gentle techniques, we ensure every bath,
+										styling, and spa treatment leaves your furry friend
+										feeling refreshed and looking their best. With a focus on
+										comfort, safety, and personalized care, we make every
+										visit a pampering retreat because your pet deserves
+										nothing less than premium treatment
+									</p>
+								</div>
+								<div class="about__actions">
+									<a class="button button--tr" href=".about.html">Learn More</a>
+								</div>
 							</div>
-							<div class="about__actions">
-								<a class="button button--tr" href=".about.html">Learn More</a>
+							<div class="about__img">
+								<img class="about__image ibg ibg--cover" src="img/about/1.webp" alt="Image" />
 							</div>
 							<ul class="about__list">
 								<li class="about__item">
@@ -311,17 +304,237 @@
 									</div>
 								</li>
 							</ul>
-						</div>
-						<div class="about__bottom">
-							<div data-da=".about__body,992.98,2" class="about__img">
-								<img class="about__image ibg ibg--cover" src="img/about/1.webp" alt="Image" />
-							</div>
+							<!-- data-da=".about__body,992.98,2" -->
 						</div>
 					</div>
 				</div>
 			</section>
-
+			<section class="page__discount discount">
+				<div class="discount__cntr">
+					<div class="discount__left"></div>
+					<div class="discount__right">
+						<h2 class="discount__title">
+							Get 20% discount for the care of a puppy or kitten up to 6
+							months
+						</h2>
+						<div class="discount__actions">
+							<a data-goto-header data-goto=".form" class="button button--br" href="#">Schedule a Visit</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__steps steps">
+				<div class="block-header block-header--center">
+					<div class="block-header__lines">
+						<div class="block-header__line block-header__line--hide"></div>
+						<div>
+							<h2 class="block-header__title block-header__title--center">
+								Experience Stress-Free Grooming for Your Pet
+							</h2>
+						</div>
+						<div class="block-header__line"></div>
+					</div>
+					<div class="block-header__lines block-header__lines--nl">
+						<div></div>
+						<div class="block-header__text text">
+							<p>
+								Our grooming process begins with a thorough consultation to
+								understand your pet's specific needs. We then use high-quality
+								products and techniques to ensure a safe and enjoyable
+								experience.
+							</p>
+						</div>
+						<div></div>
+					</div>
+				</div>
+				<div class="steps__cntr">
+					<div class="steps__slider swiper">
+						<div class="steps__wrapper swiper-wrapper">
+							<div class="steps__slide swiper-slide">
+								<article class="step">
+									<div class="step__img">
+										<img class="step__image ibg" src="img/steps/1.webp" alt="Image" />
+									</div>
+									<h3 class="step__title">Consultation & Assvessment</h3>
+									<div class="step__text">
+										<p>
+											We start with a personalized consultation to understand
+											your pet’s grooming needs, coat condition, and any
+											special requests.
+										</p>
+									</div>
+								</article>
+							</div>
+							<div class="steps__slide swiper-slide">
+								<article class="step">
+									<div class="step__img">
+										<img class="step__image ibg" src="img/steps/2.webp" alt="Image" />
+									</div>
+									<h3 class="step__title">Bath & Cleaning</h3>
+									<div class="step__text">
+										<p>
+											A gentle, deep-cleansing bath using high-quality,
+											pet-safe shampoos, followed by a thorough rinse and coat
+											conditioning for softness and shine.
+										</p>
+									</div>
+								</article>
+							</div>
+							<div class="steps__slide swiper-slide">
+								<article class="step">
+									<div class="step__img">
+										<img class="step__image ibg" src="img/steps/3.webp" alt="Image" />
+									</div>
+									<h3 class="step__title">Drying & Brushing</h3>
+									<div class="step__text">
+										<p>
+											We carefully dry your pet using a combination of towel
+											drying and low-heat blow drying, then brush out tangles
+											and loose fur to keep the coat healthy.
+										</p>
+									</div>
+								</article>
+							</div>
+							<div class="steps__slide swiper-slide">
+								<article class="step">
+									<div class="step__img">
+										<img class="step__image ibg" src="img/steps/4.webp" alt="Image" />
+									</div>
+									<h3 class="step__title">Trimming & Styling</h3>
+									<div class="step__text">
+										<p>
+											Whether it’s a simple trim or a stylish cut, our
+											professional groomers shape your pet’s fur to
+											perfection, including nail clipping, paw pad care, and
+											ear cleaning.
+										</p>
+									</div>
+								</article>
+							</div>
+							<div class="steps__slide swiper-slide">
+								<article class="step">
+									<div class="step__img">
+										<img class="step__image ibg" src="img/steps/5.webp" alt="Image" />
+									</div>
+									<h3 class="step__title">Finishing Touches & Pampering</h3>
+									<div class="step__text">
+										<p>
+											We add the final touches, such as a spritz of
+											pet-friendly fragrance, a stylish bandana, or even a
+											bow, ensuring your pet leaves looking and feeling their
+											best.
+										</p>
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="steps__status">
+							<div class="steps__pagination"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__services services">
+				<div class="block-header block-header--lr">
+					<div class="block-header__lines">
+						<h2 class="block-header__title">
+							Comprehensive Grooming Services for Your Pets
+						</h2>
+						<div class="block-header__line"></div>
+						<div class="block-header__label">Services</div>
+					</div>
+					<div class="block-header__text text">
+						<div></div>
+						<div>
+							<p>
+								We offer a complete suite of grooming services designed to
+								pamper your pets. From refreshing baths to stylish haircuts
+								and meticulous nail trimming, our skilled groomers ensure a
+								delightful experience for every furry friend. Trust us to
+								provide the care and attention your pet deserves.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="services__cntr">
+					<div class="services__list">
+						<article class="service">
+							<div class="service__img">
+								<img class="service__image ibg" src="img/services/s-1-1.webp" alt="Image" />
+							</div>
+							<div class="service__body">
+								<h3 class="service__title">Bathing dogs</h3>
+								<div class="service__actions">
+									<a data-popup="#popup-1" class="button button--opa" href="#">Detail</a>
+									<a data-goto-header data-goto=".form" class="button button--bropa" href="#">Visit</a>
+								</div>
+							</div>
+						</article>
+						<article class="service">
+							<div class="service__img">
+								<img class="service__image ibg" src="img/services/s-2-2.webp" alt="Image" />
+							</div>
+							<div class="service__body">
+								<h3 class="service__title">Hygienic complex</h3>
+								<div class="service__actions">
+									<a data-popup="#popup-2" class="button button--opa" href="#">Detail</a>
+									<a data-goto-header data-goto=".form" class="button button--bropa" href="#">Visit</a>
+								</div>
+							</div>
+						</article>
+						<article class="service">
+							<div class="service__img">
+								<img class="service__image ibg" src="img/services/s-3-3.webp" alt="Image" />
+							</div>
+							<div class="service__body">
+								<h3 class="service__title">Home haircut</h3>
+								<div class="service__actions">
+									<a data-popup="#popup-3" class="button button--opa" href="#">Detail</a>
+									<a data-goto-header data-goto=".form" class="button button--bropa" href="#">Visit</a>
+								</div>
+							</div>
+						</article>
+						<article class="service">
+							<div class="service__img">
+								<img class="service__image ibg" src="img/services/s-4-4.webp" alt="Image" />
+							</div>
+							<div class="service__body">
+								<h3 class="service__title">Comprehensive care t</h3>
+								<div class="service__actions">
+									<a data-popup="#popup-4" class="button button--opa" href="#">Detail</a>
+									<a data-goto-header data-goto=".form" class="button button--bropa" href="#">Visit</a>
+								</div>
+							</div>
+						</article>
+						<article class="service">
+							<div class="service__img">
+								<img class="service__image ibg" src="img/services/s-5-5.webp" alt="Image" />
+							</div>
+							<div class="service__body">
+								<h3 class="service__title">Care for cats</h3>
+								<div class="service__actions">
+									<a data-popup="#popup-5" class="button button--opa" href="#">Detail</a>
+									<a data-goto-header data-goto=".form" class="button button--bropa" href="#">Visit</a>
+								</div>
+							</div>
+						</article>
+						<article class="service">
+							<div class="service__img">
+								<img class="service__image ibg" src="img/services/s-6-6.webp" alt="Image" />
+							</div>
+							<div class="service__body">
+								<h3 class="service__title">Additional services</h3>
+								<div class="service__actions">
+									<a data-popup="#popup-6" class="button button--opa" href="#">Detail</a>
+									<a data-goto-header data-goto=".form" class="button button--bropa" href="#">Visit</a>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
 			<div class="specialists"></div>
+
 			<div><!-- <div class="common">
   <h1 class="title title_link">title</h1>
   <h2 class="subtitle">subtitle</h2>
@@ -382,7 +595,152 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250210150957"></script>
+	<div>
+		<div id="popup-1" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" width="61" height="60" viewBox="0 0 61 60" fill="none">
+							<path d="M20.988 40L40.787 20.201" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" />
+							<path d="M20.988 20L40.787 39.799" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</button>
+					<div class="popup__title">Bathing dogs</div>
+					<div class="popup__list">
+						<ul>
+							<li>Bathing</li>
+							<li>Drying</li>
+							<li>Combing</li>
+							<li>
+								Cleaning tear ducts, ears (combing out tangles is not included in
+								the price)
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="popup-2" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" width="61" height="60" viewBox="0 0 61 60" fill="none">
+							<path d="M20.988 40L40.787 20.201" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" />
+							<path d="M20.988 20L40.787 39.799" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</button>
+					<div class="popup__title">Hygienic complex</div>
+					<div class="popup__list">
+						<ul>
+							<li>Bathing</li>
+							<li>Drying</li>
+							<li>Ear cleaning, hair removal & flushing</li>
+							<li>Edging of paws, hair around genitals, on ears</li>
+							<li>Cleaning tear secretions</li>
+							<li>Nail trim</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="popup-3" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" width="61" height="60" viewBox="0 0 61 60" fill="none">
+							<path d="M20.988 40L40.787 20.201" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" />
+							<path d="M20.988 20L40.787 39.799" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</button>
+					<div class="popup__title">Home haircut</div>
+					<div class="popup__list">
+						<ul>
+							<li>Bathing</li>
+							<li>Drying</li>
+							<li>Clipping with a clipper or scissors</li>
+							<li>Trimming paws, hair around genitals, on the ears</li>
+							<li>Ear cleaning, hair removal & flushing</li>
+							<li>Cleaning tear ducts</li>
+							<li>Nail trim</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="popup-4" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" width="61" height="60" viewBox="0 0 61 60" fill="none">
+							<path d="M20.988 40L40.787 20.201" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" />
+							<path d="M20.988 20L40.787 39.799" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</button>
+					<div class="popup__title">Comprehensive care</div>
+					<div class="popup__list">
+						<ul>
+							<li>Bathing</li>
+							<li>Drying</li>
+							<li>Haircut with scissors</li>
+							<li>Trimming (if necessary)</li>
+							<li>Clipping the hair around the genitals</li>
+							<li>Ear cleaning, hair removal & flushing</li>
+							<li>Nail trim</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="popup-5" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" width="61" height="60" viewBox="0 0 61 60" fill="none">
+							<path d="M20.988 40L40.787 20.201" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" />
+							<path d="M20.988 20L40.787 39.799" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</button>
+					<div class="popup__title">Care for cats</div>
+					<div class="popup__list">
+						<ul>
+							<li>Bathing with professional cosmetics</li>
+							<li>Drying</li>
+							<li>Bathing with professional cosmetics</li>
+							<li>Cleaning the ears</li>
+							<li>Clearing tear accumulations</li>
+							<li>Nail trim</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="popup-6" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" width="61" height="60" viewBox="0 0 61 60" fill="none">
+							<path d="M20.988 40L40.787 20.201" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" />
+							<path d="M20.988 20L40.787 39.799" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</button>
+					<div class="popup__title">Additional services</div>
+					<div class="popup__list">
+						<ul>
+							<li>Nail trim</li>
+							<li>Nail grinding</li>
+							<li>Combing</li>
+							<li>Brushing teeth</li>
+							<li>Cleaning the ears</li>
+							<li>Flea treatment with Frontline spray</li>
+							<li>15-minute brushing</li>
+							<li>Sanitary trim</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20250211155315"></script>
 </body>
 
 </html>
