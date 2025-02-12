@@ -1726,8 +1726,7 @@ html.menu-open .header__actions {
   display: inline-flex;
   flex-direction: column;
   justify-items: start;
-  align-items: start;
-  grid-template-columns: 1fr
+  align-items: start
 }
 .shchedule__button {
   transition: all .3s;
@@ -1780,6 +1779,7 @@ html.menu-open .header__actions {
   border-radius: 0 1rem 1rem 0;
   backdrop-filter: blur(17.5px);
   transition: background-color .3s;
+  padding-top: 2.5rem;
   background-color: var(--beige-opacity-80,rgba(255,250,242,.8));
   opacity: 0;
   transition: opacity .3s;
@@ -2633,9 +2633,6 @@ button.swiper-pagination-bullet {
     font-size: 2.5rem
   }
   .shchedule__content {
-    padding-top: 2.5rem
-  }
-  .shchedule__content {
     padding-bottom: 2.5rem
   }
 }
@@ -2983,6 +2980,7 @@ button.swiper-pagination-bullet {
     max-width: 100%
   }
   .shchedule__navigation {
+    display: grid;
     grid-template-columns: repeat(2,1fr)
   }
   .shchedule__button {
@@ -3332,9 +3330,6 @@ button.swiper-pagination-bullet {
     font-size: 1.5rem
   }
   .shchedule__content {
-    padding-top: 2.5rem
-  }
-  .shchedule__content {
     padding-bottom: 3.75rem
   }
 }
@@ -3481,9 +3476,6 @@ button.swiper-pagination-bullet {
   }
   .shchedule__title {
     font-size: clamp(1.5rem ,1.2631578947rem + 1.0526315789vw ,2.5rem)
-  }
-  .shchedule__content {
-    padding-top: clamp(2.5rem ,2.5rem + 0 ,2.5rem)
   }
   .shchedule__content {
     padding-bottom: clamp(2.5rem ,4.0460526316rem + -1.3157894737vw ,3.75rem)
