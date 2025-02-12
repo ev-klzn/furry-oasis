@@ -483,6 +483,29 @@
     (() => {
         "use strict";
         const flsModules = {};
+        let isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+            }
+        };
+        function addTouchClass() {
+            if (isMobile.any()) document.documentElement.classList.add("touch");
+        }
         function addLoadedClass() {
             if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
                 setTimeout((function() {
@@ -558,6 +581,98 @@
                 return self.indexOf(item) === index;
             }));
         }
+        class BeforeAfter {
+            constructor(props) {
+                let defaultConfig = {
+                    init: true,
+                    logging: true
+                };
+                this.config = Object.assign(defaultConfig, props);
+                if (this.config.init) {
+                    const beforeAfterItems = document.querySelectorAll("[data-ba]");
+                    if (beforeAfterItems.length > 0) {
+                        this.setLogging(`Прокинувся, бачу елементів: ${beforeAfterItems.length}`);
+                        this.beforeAfterInit(beforeAfterItems);
+                    } else this.setLogging(`Прокинувся, не бачу елементів`);
+                }
+            }
+            beforeAfterInit(beforeAfterItems) {
+                beforeAfterItems.forEach((beforeAfter => {
+                    if (beforeAfter) {
+                        this.beforeAfterClasses(beforeAfter);
+                        this.beforeAfterItemInit(beforeAfter);
+                    }
+                }));
+            }
+            beforeAfterClasses(beforeAfter) {
+                beforeAfter.querySelector("[data-ba-arrow]");
+                beforeAfter.addEventListener("mouseover", (function(e) {
+                    const targetElement = e.target;
+                    if (!targetElement.hasAttribute("data-ba-arrow")) if (targetElement.closest("[data-ba-before]")) {
+                        beforeAfter.classList.remove("_right");
+                        beforeAfter.classList.add("_left");
+                    } else {
+                        beforeAfter.classList.add("_right");
+                        beforeAfter.classList.remove("_left");
+                    }
+                }));
+                beforeAfter.addEventListener("mouseleave", (function() {
+                    beforeAfter.classList.remove("_left");
+                    beforeAfter.classList.remove("_right");
+                }));
+            }
+            beforeAfterItemInit(beforeAfter) {
+                const beforeAfterArrow = beforeAfter.querySelector("[data-ba-arrow]");
+                const afterItem = beforeAfter.querySelector("[data-ba-after]");
+                const beforeAfterArrowWidth = parseFloat(window.getComputedStyle(beforeAfterArrow).getPropertyValue("width"));
+                let beforeAfterSizes = {};
+                if (beforeAfterArrow) isMobile.any() ? beforeAfterArrow.addEventListener("touchstart", beforeAfterDrag) : beforeAfterArrow.addEventListener("mousedown", beforeAfterDrag);
+                function beforeAfterDrag(e) {
+                    beforeAfterSizes = {
+                        width: beforeAfter.offsetWidth,
+                        left: beforeAfter.getBoundingClientRect().left - scrollX
+                    };
+                    if (isMobile.any()) {
+                        document.addEventListener("touchmove", beforeAfterArrowMove);
+                        document.addEventListener("touchend", (function(e) {
+                            document.removeEventListener("touchmove", beforeAfterArrowMove);
+                        }), {
+                            once: true
+                        });
+                    } else {
+                        document.addEventListener("mousemove", beforeAfterArrowMove);
+                        document.addEventListener("mouseup", (function(e) {
+                            document.removeEventListener("mousemove", beforeAfterArrowMove);
+                        }), {
+                            once: true
+                        });
+                    }
+                    document.addEventListener("dragstart", (function(e) {
+                        e.preventDefault();
+                    }), {
+                        once: true
+                    });
+                }
+                function beforeAfterArrowMove(e) {
+                    const posLeft = e.type === "touchmove" ? e.touches[0].clientX - beforeAfterSizes.left : e.clientX - beforeAfterSizes.left;
+                    if (posLeft <= beforeAfterSizes.width && posLeft > 0) {
+                        const way = posLeft / beforeAfterSizes.width * 100;
+                        beforeAfterArrow.style.cssText = `left:calc(${way}% - ${beforeAfterArrowWidth}px)`;
+                        afterItem.style.cssText = `width: ${100 - way}%`;
+                    } else if (posLeft >= beforeAfterSizes.width) {
+                        beforeAfterArrow.style.cssText = `left: calc(100% - ${beforeAfterArrowWidth}px)`;
+                        afterItem.style.cssText = `width: 0%`;
+                    } else if (posLeft <= 0) {
+                        beforeAfterArrow.style.cssText = `left: 0%`;
+                        afterItem.style.cssText = `width: 100%`;
+                    }
+                }
+            }
+            setLogging(message) {
+                this.config.logging ? FLS(`[BeforeAfter]: ${message} `) : null;
+            }
+        }
+        flsModules.ba = new BeforeAfter({});
         class Popup {
             constructor(options) {
                 let config = {
@@ -4803,16 +4918,12 @@
                 on: {}
             });
             if (document.querySelector(".steps__slider")) new swiper_core_Swiper(".steps__slider", {
-                modules: [ Navigation, Pagination ],
+                modules: [ Navigation, Pagination, Autoplay ],
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 24,
                 speed: 800,
-                autoplay: {
-                    delay: 3e3,
-                    disableOnInteraction: false
-                },
                 pagination: {
                     el: ".steps__pagination",
                     clickable: true
@@ -4843,16 +4954,13 @@
                 on: {}
             });
             if (document.querySelector(".staff__slider")) new swiper_core_Swiper(".staff__slider", {
-                modules: [ Navigation, Pagination ],
+                modules: [ Navigation, Pagination, Autoplay ],
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 16,
                 speed: 800,
-                autoplay: {
-                    delay: 3e3,
-                    disableOnInteraction: false
-                },
+                loop: true,
                 pagination: {
                     el: ".staff__pagination",
                     clickable: true
@@ -4875,6 +4983,26 @@
                         slidesPerView: 4,
                         spaceBetween: 20
                     }
+                },
+                on: {}
+            });
+            if (document.querySelector(".gallery__slider")) new swiper_core_Swiper(".gallery__slider", {
+                modules: [ Navigation, Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 16,
+                speed: 800,
+                touchRatio: 0,
+                simulateTouch: false,
+                loop: true,
+                pagination: {
+                    el: ".gallery__pagination",
+                    clickable: true
+                },
+                navigation: {
+                    prevEl: ".gallery__prev",
+                    nextEl: ".gallery__next"
                 },
                 on: {}
             });
@@ -5150,6 +5278,7 @@
         const da = new DynamicAdapt("max");
         da.init();
         window["FLS"] = false;
+        addTouchClass();
         addLoadedClass();
         menuInit();
         formFieldsInit({
