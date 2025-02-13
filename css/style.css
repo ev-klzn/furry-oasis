@@ -947,7 +947,7 @@ body::after {
   -o-object-fit: contain;
   object-fit: contain
 }
-.shchedule__button {
+.schedule__button {
   transition: all .3s;
   -webkit-filter: grayscale(1);
   filter: grayscale(1)
@@ -1714,7 +1714,7 @@ html.menu-open .header__actions {
 .visit__cntr {
   background: url(../img/schedule/mobile.webp) center/cover no-repeat
 }
-.shchedule {
+.schedule {
   max-width: 60rem;
   display: grid;
   grid-template-columns: -webkit-max-content 1fr;
@@ -1722,20 +1722,20 @@ html.menu-open .header__actions {
   align-items: start;
   margin-right: 1rem
 }
-.shchedule__navigation {
+.schedule__navigation {
   display: inline-flex;
   flex-direction: column;
   justify-items: start;
   align-items: start
 }
-.shchedule__button {
+.schedule__button {
   transition: all .3s;
   overflow: hidden;
   padding: 1rem;
   position: relative;
   border-radius: 1rem 0 0 1rem
 }
-.shchedule__button::before {
+.schedule__button::before {
   border-radius: 1rem;
   content: "";
   top: -1rem;
@@ -1746,13 +1746,13 @@ html.menu-open .header__actions {
   height: 100%;
   background: linear-gradient(0deg,rgba(0,0,0,.5) 16.48%,rgba(0,0,0,0) 36.27%)
 }
-.shchedule__button._tab-active {
+.schedule__button._tab-active {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
   backdrop-filter: blur(17.5px);
   background-color: var(--beige-opacity-80,rgba(255,250,242,.8))
 }
-.shchedule__title {
+.schedule__title {
   position: absolute;
   bottom: 2rem;
   right: 2rem;
@@ -1763,36 +1763,45 @@ html.menu-open .header__actions {
   font-weight: 400;
   line-height: 120%
 }
-.shchedule__img {
+.schedule__img {
   overflow: hidden;
   max-width: 18.75rem
 }
-.shchedule__image {
+.schedule__image {
   overflow: hidden;
   border-radius: 1rem;
   aspect-ratio: 300/322
 }
-.shchedule__content {
+.schedule__content {
   display: inline-flex;
   flex-direction: column;
   margin-left: -.0625rem;
-  border-radius: 0 1rem 1rem 0;
+  overflow: hidden;
   backdrop-filter: blur(17.5px);
   transition: background-color .3s;
-  padding-top: 2.5rem;
-  background-color: var(--beige-opacity-80,rgba(255,250,242,.8));
   opacity: 0;
   transition: opacity .3s;
   transition-delay: .3s
 }
-.shchedule__content._watcher-view {
+.schedule__content._watcher-view {
   opacity: 1
 }
-.shchedule__body {
-  opacity: 0;
+.schedule__body {
+  overflow: hidden;
+  background-color: var(--beige-opacity-80,rgba(255,250,242,.8));
+  padding-top: 2.5rem;
+  overflow: hidden;
   transition: opacity .3s
 }
-.shchedule__body._watcher-view {
+.schedule__body--br1 {
+  overflow: hidden;
+  border-radius: 0 1rem 1rem 1rem
+}
+.schedule__body--br2 {
+  overflow: hidden;
+  border-radius: 1rem
+}
+.schedule__body._watcher-view {
   opacity: 1
 }
 [data-ba] {
@@ -2629,10 +2638,10 @@ button.swiper-pagination-bullet {
   .visit__cntr {
     padding-bottom: 4.375rem
   }
-  .shchedule__title {
+  .schedule__title {
     font-size: 2.5rem
   }
-  .shchedule__content {
+  .schedule__body {
     padding-bottom: 2.5rem
   }
 }
@@ -2667,13 +2676,13 @@ button.swiper-pagination-bullet {
   .gallery__status {
     padding-right: 12.1875rem
   }
-  .shchedule {
+  .schedule {
     margin-left: 9.6875rem
   }
-  .shchedule__content {
+  .schedule__body {
     padding-left: 5.625rem
   }
-  .shchedule__content {
+  .schedule__body {
     padding-right: 4.5625rem
   }
 }
@@ -2797,13 +2806,13 @@ button.swiper-pagination-bullet {
   .gallery__status {
     padding-right: 1rem
   }
-  .shchedule {
+  .schedule {
     margin-left: 1rem
   }
-  .shchedule__content {
+  .schedule__body {
     padding-left: 1rem
   }
-  .shchedule__content {
+  .schedule__body {
     padding-right: 1rem
   }
 }
@@ -2975,27 +2984,36 @@ button.swiper-pagination-bullet {
     margin-right: -.9375rem;
     padding-bottom: 0
   }
-  .shchedule {
+  .schedule {
     grid-template-columns: auto;
     max-width: 100%
   }
-  .shchedule__navigation {
+  .schedule__navigation {
     display: grid;
     grid-template-columns: repeat(2,1fr)
   }
-  .shchedule__button {
+  .schedule__button {
     border-radius: 1rem 1rem 0 0
   }
-  .shchedule__img {
+  .schedule__img {
     max-width: 100%
   }
-  .shchedule__image {
+  .schedule__image {
     aspect-ratio: 1/1
   }
-  .shchedule__content {
+  .schedule__content {
     margin-left: 0;
     margin-top: -.0625rem;
     border-radius: 0 0 1rem 1rem;
+    border-radius: 0
+  }
+  .schedule__body--br1 {
+    border-radius: 0
+  }
+  .schedule__body--br2 {
+    border-radius: 0
+  }
+  .schedule__body {
     border-radius: 0
   }
 }
@@ -3124,10 +3142,10 @@ button.swiper-pagination-bullet {
   .testimonial {
     padding: 1rem
   }
-  .shchedule__button {
+  .schedule__button {
     padding: .5rem
   }
-  .shchedule__button::before {
+  .schedule__button::before {
     width: calc(100% - 1rem);
     top: -.5rem;
     left: .5rem
@@ -3326,10 +3344,10 @@ button.swiper-pagination-bullet {
   .visit__cntr {
     padding-bottom: 1.875rem
   }
-  .shchedule__title {
+  .schedule__title {
     font-size: 1.5rem
   }
-  .shchedule__content {
+  .schedule__body {
     padding-bottom: 3.75rem
   }
 }
@@ -3474,10 +3492,10 @@ button.swiper-pagination-bullet {
   .visit__cntr {
     padding-bottom: clamp(1.875rem ,1.2828947368rem + 2.6315789474vw ,4.375rem)
   }
-  .shchedule__title {
+  .schedule__title {
     font-size: clamp(1.5rem ,1.2631578947rem + 1.0526315789vw ,2.5rem)
   }
-  .shchedule__content {
+  .schedule__body {
     padding-bottom: clamp(2.5rem ,4.0460526316rem + -1.3157894737vw ,3.75rem)
   }
 }
@@ -3520,13 +3538,13 @@ button.swiper-pagination-bullet {
   .gallery__status {
     padding-right: clamp(1rem ,-10.9590517241rem + 19.2887931034vw ,12.1875rem)
   }
-  .shchedule {
+  .schedule {
     margin-left: clamp(1rem ,-8.286637931rem + 14.9784482759vw ,9.6875rem)
   }
-  .shchedule__content {
+  .schedule__body {
     padding-left: clamp(1rem ,-3.9439655172rem + 7.974137931vw ,5.625rem)
   }
-  .shchedule__content {
+  .schedule__body {
     padding-right: clamp(1rem ,-2.8081896552rem + 6.1422413793vw ,4.5625rem)
   }
 }
@@ -3586,7 +3604,7 @@ button.swiper-pagination-bullet {
   .select__option:hover {
     background: #d9d9d9
   }
-  .shchedule__button:hover {
+  .schedule__button:hover {
     -webkit-filter: grayscale(0);
     filter: grayscale(0)
   }
