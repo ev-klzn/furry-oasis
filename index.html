@@ -20,7 +20,7 @@
 	<meta name="description" content="Furry Oasis - Furry Oasis">
 	<meta name="robots" content="noindex, nofollow">
 	<title>Furry Oasis - Furry Oasis</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250213103119">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250213112753">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -811,15 +811,15 @@
 			</section>
 			<section class="page__visit visit">
 				<div class="visit__cntr">
-					<div data-tabs class="tabs schedule">
+					<div data-tabs class="schedule">
 						<nav data-tabs-titles class="schedule__navigation">
-							<button data-tab-button="1" type="button" class="schedule__button _tab-active tab tab--active">
+							<button type="button" class="schedule__button _tab-active">
 								<div class="schedule__img">
 									<img class="schedule__image ibg" src="img/schedule/dog.webp" alt="dog" />
 								</div>
 								<h3 class="schedule__title">Dog</h3>
 							</button>
-							<button data-tab-button="2" type="button" class="tab schedule__button">
+							<button type="button" class="schedule__button">
 								<div class="schedule__img">
 									<img class="schedule__image ibg" src="img/schedule/cat.webp" alt="cat" />
 								</div>
@@ -827,7 +827,7 @@
 							</button>
 						</nav>
 						<div data-tabs-body data-watch data-watch-once class="schedule__content">
-							<div data-watch data-tab-content="1" class="schedule__body schedule__body--br1 schedule__body--active">
+							<div data-watch class="schedule__body schedule__body--br1">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit.
 								Inventore delectus non voluptatum fugit earum est esse odio
 								rem ipsum enim. Modi est nusdfmquam doloribus laudantium, qui
@@ -862,7 +862,7 @@
 								adipisci ad incidunt, eos veritatis amet deleniti animi
 								impedit officiis, labore rerum vitae neque
 							</div>
-							<div data-watch data-tab-content="2" class="schedule__body schedule__body--br2">
+							<div data-watch class="schedule__body schedule__body--br2">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit.
 								Inventore delectus non voluptatum fugit earum est esse odio
 								rem ipsum enim. Modi est numquam doloribus laudantium, qui
@@ -906,38 +906,38 @@
 						</div>
 					</div>
 				</div>
-				<script>
-					document.addEventListener("DOMContentLoaded", function() {
-						const tabs = document.querySelectorAll("[data-tab-button]");
-						const scheduleBodies =
-							document.querySelectorAll("[data-tab-content]");
+				<!-- <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const tabs = document.querySelectorAll("[data-tab-button]");
+              const scheduleBodies =
+                document.querySelectorAll("[data-tab-content]");
 
-						function updateTabs(activeTab) {
-							const tabIndex = activeTab.getAttribute("data-tab-button");
-							tabs.forEach((t) => t.classList.remove("tab--active"));
-							activeTab.classList.add("tab--active");
-							scheduleBodies.forEach((body) => {
-								if (body.getAttribute("data-tab-content") === tabIndex) {
-									body.classList.add(`schedule__body--br${tabIndex}`);
-									body.classList.add("schedule__body--active");
-								} else {
-									body.classList.remove("schedule__body--active");
-									body.classList.remove("schedule__body--br1");
-									body.classList.remove("schedule__body--br2");
-								}
-							});
-						}
-						tabs.forEach((tab) => {
-							tab.addEventListener("click", function() {
-								updateTabs(this);
-							});
-						});
-						const defaultTab = document.querySelector(
-							"[data-tab-button='1']"
-						);
-						if (defaultTab) updateTabs(defaultTab);
-					});
-				</script>
+              function updateTabs(activeTab) {
+                const tabIndex = activeTab.getAttribute("data-tab-button");
+                tabs.forEach((t) => t.classList.remove("tab--active"));
+                activeTab.classList.add("tab--active");
+                scheduleBodies.forEach((body) => {
+                  if (body.getAttribute("data-tab-content") === tabIndex) {
+                    body.classList.add(`schedule__body--br${tabIndex}`);
+                    body.classList.add("schedule__body--active");
+                  } else {
+                    body.classList.remove("schedule__body--active");
+                    body.classList.remove("schedule__body--br1");
+                    body.classList.remove("schedule__body--br2");
+                  }
+                });
+              }
+              tabs.forEach((tab) => {
+                tab.addEventListener("click", function () {
+                  updateTabs(this);
+                });
+              });
+              const defaultTab = document.querySelector(
+                "[data-tab-button='1']"
+              );
+              if (defaultTab) updateTabs(defaultTab);
+            });
+          </script> -->
 			</section>
 			<div><!-- <div class="common">
   <h1 class="title title_link">title</h1>
@@ -1144,7 +1144,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250213103119"></script>
+	<script src="js/app.min.js?_v=20250213112753"></script>
 </body>
 
 </html>
