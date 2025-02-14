@@ -20,7 +20,7 @@
 	<meta name="description" content="Furry Oasis - Furry Oasis">
 	<meta name="robots" content="noindex, nofollow">
 	<title>Furry Oasis - Furry Oasis</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250213112753">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250214124936">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -828,39 +828,78 @@
 						</nav>
 						<div data-tabs-body data-watch data-watch-once class="schedule__content">
 							<div data-watch class="schedule__body schedule__body--br1">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Inventore delectus non voluptatum fugit earum est esse odio
-								rem ipsum enim. Modi est nusdfmquam doloribus laudantium, qui
-								quidem esse iure adipisci ad incidunt, eos veritatis amet
-								deleniti animi impedit officiis, labore rerum vitae neque
-								Lorem ipsumpedit officiis, labore rerum vitae neque Lorem
-								ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Inventore delectus non voluptatum fugit
-								earum est esse odio rem ipsum enim. Modi est numquam doloribus
-								laudantium, qui quidem esse iure adipisci ad incidunt, eos
-								veritatis amet deleniti animi impedit officiis, labore rerum
-								vitae neque Lorem ipsum dolor sit amet consectetur adipisicing
-								elit. Inventore delectus non voluptatum fugit earum est esse
-								odio rem ipsum enim. Modi est numquam doloribus laudantium,
-								qui i quidem esse iure adipisci ad incidunt, eos veritatis
-								amet deleniti animi impedit officiis, labore rerum vitae neque
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Inventore delectus non voluptatum fugit earum est esse odio
-								rem ipsum enim. Modi est numquam doloribus laudantium, qui
-								quidem esse iure adipisci ad incidunt, eos veritatis amet
-								deleniti animi impedit officiis, labore rerum vitae neque
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Inventore delectus non voluptatum fugit earum est esse odio
-								rem ipsum enim. Modi est numquam doloribus laudantium, qui i
-								quidem esse iure adipisci ad incidunt, eos veritatis amet
-								deleniti animi impedit officiis, labore rerum vitae
-								nequeconsectetur adipisicing elit. Inventore delectus non
-								voluptatum fugit earum est esse odio rem ipsum enim. Modi est
-								numquam doloribus laudantium, qui quidem esse iure adipisci ad
-								incidunt, eos veritatis amet deleniti animi sit amett.
-								Inventore delectus non bus laudantium, qui quidem esse iure
-								adipisci ad incidunt, eos veritatis amet deleniti animi
-								impedit officiis, labore rerum vitae neque
+								<!--  method="POST" method="GET" -->
+								<form netlify class="form" id="form-dog" name="form-dog" method="POST">
+									<div class="form__header">
+										<h2 class="form__title">
+											Schedule Your Pet's Grooming Today
+										</h2>
+										<div class="form__text text">
+											Experience the best grooming services for your beloved
+											pets. Schedule an appointment with us now!
+										</div>
+									</div>
+									<div class="form__content">
+										<div class="form__columns">
+											<input data-required data-validate required autocomplete="off" class="form__input input" id="name" name="name" type="text" placeholder="Name: *" />
+											<input autocomplete="off" data-required data-validate required pattern="^\d{10,12}$" class="form__input input" id="phone" name="phone" type="tel" placeholder="Phone number: *" />
+										</div>
+										<div data-watch data-spollers data-spollers-speed="300" class="form__services">
+											<details data-watch class="form__items">
+												<summary class="form__checked">Service</summary>
+												<div class="form__body">
+													<!-- <div class="form__unit">
+                              <input
+                                name="05"
+                                class="form__check"
+                                id="check5"
+                                type="checkbox" />
+                              <label class="form__label" for="check5"
+                                >Care for cats</label
+                              >
+                            </div> -->
+													<div class="form__unit">
+														<input name="01" class="form__check" id="check1" type="checkbox" />
+														<label class="form__label" for="check1">Bathing dogs</label>
+													</div>
+													<div class="form__unit">
+														<input name="02" class="form__check" id="check2" type="checkbox" />
+														<label class="form__label" for="check2">Hygienic complex</label>
+													</div>
+													<div class="form__unit">
+														<input name="03" class="form__check" id="check3" type="checkbox" />
+														<label class="form__label" for="check3">Home haircut</label>
+													</div>
+													<div class="form__unit">
+														<input name="04" class="form__check" id="check4" type="checkbox" />
+														<label class="form__label" for="check4">Comprehensive care</label>
+													</div>
+													<div class="form__unit">
+														<input name="06" class="form__check" id="check6" type="checkbox" />
+														<label class="form__label" for="check6">Nails trim</label>
+													</div>
+													<div class="form__unit">
+														<input name="07" class="form__check" id="check7" type="checkbox" />
+														<label class="form__label form__label--nb" for="check7">Cleaning teeth</label>
+													</div>
+												</div>
+											</details>
+										</div>
+
+										<div class="form__date">
+											<input autocomplete="off" required class="form__input input" data-datepicker type="text" name="date" placeholder="Select date" />
+											<div class="form__img">
+												<img class="form__image ibg" src="img/icons/calendar.svg" alt="Image" />
+											</div>
+										</div>
+										<textarea autocomplete="off" data-autoheight class="input" name="textarea" id="textarea" placeholder="Type a message ...*"></textarea>
+									</div>
+									<div class="form__actions form__actions--center">
+										<button form="form-dog" type="submit" class="button button--br">
+											Schedule a Visit
+										</button>
+									</div>
+								</form>
 							</div>
 							<div data-watch class="schedule__body schedule__body--br2">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -906,38 +945,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const tabs = document.querySelectorAll("[data-tab-button]");
-              const scheduleBodies =
-                document.querySelectorAll("[data-tab-content]");
-
-              function updateTabs(activeTab) {
-                const tabIndex = activeTab.getAttribute("data-tab-button");
-                tabs.forEach((t) => t.classList.remove("tab--active"));
-                activeTab.classList.add("tab--active");
-                scheduleBodies.forEach((body) => {
-                  if (body.getAttribute("data-tab-content") === tabIndex) {
-                    body.classList.add(`schedule__body--br${tabIndex}`);
-                    body.classList.add("schedule__body--active");
-                  } else {
-                    body.classList.remove("schedule__body--active");
-                    body.classList.remove("schedule__body--br1");
-                    body.classList.remove("schedule__body--br2");
-                  }
-                });
-              }
-              tabs.forEach((tab) => {
-                tab.addEventListener("click", function () {
-                  updateTabs(this);
-                });
-              });
-              const defaultTab = document.querySelector(
-                "[data-tab-button='1']"
-              );
-              if (defaultTab) updateTabs(defaultTab);
-            });
-          </script> -->
 			</section>
 			<div><!-- <div class="common">
   <h1 class="title title_link">title</h1>
@@ -1144,7 +1151,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250213112753"></script>
+	<script src="js/app.min.js?_v=20250214124936"></script>
 </body>
 
 </html>
