@@ -20,7 +20,7 @@
 	<meta name="description" content="Furry Oasis - Furry Oasis">
 	<meta name="robots" content="noindex, nofollow">
 	<title>Furry Oasis - Furry Oasis</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250214124936">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250218101633">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -329,8 +329,7 @@
 						<div class="block-header__line block-header__line--hide"></div>
 						<div>
 							<h2 class="block-header__title block-header__title--center">
-								Experience Stress-Free Grooming <br />
-								for Your Pet
+								Experience Stress-Free Grooming for Your Pet
 							</h2>
 						</div>
 						<div class="block-header__line"></div>
@@ -841,58 +840,45 @@
 									</div>
 									<div class="form__content">
 										<div class="form__columns">
-											<input data-required data-validate required autocomplete="off" class="form__input input" id="name" name="name" type="text" placeholder="Name: *" />
-											<input autocomplete="off" data-required data-validate required pattern="^\d{10,12}$" class="form__input input" id="phone" name="phone" type="tel" placeholder="Phone number: *" />
+											<input data-required data-validate required autocomplete="off" class="form__input input" id="name-dog" name="name" type="text" placeholder="Name: *" />
+											<input autocomplete="off" data-required data-validate required pattern="^\d{10,12}$" class="form__input input" id="phone-dog" name="phone" type="tel" placeholder="Phone number: *" />
 										</div>
-										<div data-watch data-spollers data-spollers-speed="300" class="form__services">
-											<details data-watch class="form__items">
-												<summary class="form__checked">Service</summary>
-												<div class="form__body">
-													<!-- <div class="form__unit">
-                              <input
-                                name="05"
-                                class="form__check"
-                                id="check5"
-                                type="checkbox" />
-                              <label class="form__label" for="check5"
-                                >Care for cats</label
-                              >
-                            </div> -->
-													<div class="form__unit">
-														<input name="01" class="form__check" id="check1" type="checkbox" />
-														<label class="form__label" for="check1">Bathing dogs</label>
-													</div>
-													<div class="form__unit">
-														<input name="02" class="form__check" id="check2" type="checkbox" />
-														<label class="form__label" for="check2">Hygienic complex</label>
-													</div>
-													<div class="form__unit">
-														<input name="03" class="form__check" id="check3" type="checkbox" />
-														<label class="form__label" for="check3">Home haircut</label>
-													</div>
-													<div class="form__unit">
-														<input name="04" class="form__check" id="check4" type="checkbox" />
-														<label class="form__label" for="check4">Comprehensive care</label>
-													</div>
-													<div class="form__unit">
-														<input name="06" class="form__check" id="check6" type="checkbox" />
-														<label class="form__label" for="check6">Nails trim</label>
-													</div>
-													<div class="form__unit">
-														<input name="07" class="form__check" id="check7" type="checkbox" />
-														<label class="form__label form__label--nb" for="check7">Cleaning teeth</label>
-													</div>
-												</div>
-											</details>
+										<select name="service" data-speed="300" data-class-modif="form">
+											<option value="" selected>Service</option>
+											<option value="2">Bathing dogs</option>
+											<option value="3">Hygienic complex</option>
+											<option value="4">Home haircut</option>
+											<option value="5">Comprehensive care</option>
+											<option value="6" data-class="select__option--pen"></option>
+										</select>
+										<div class="form__columns">
+											<select name="breed" data-speed="300" data-class-modif="form">
+												<option value="" selected>Breed</option>
+												<option value="2">Maltipoo</option>
+												<option value="3">Poodle</option>
+												<option value="4">Labradoodle</option>
+												<option value="5">Cockapoo</option>
+												<option value="6">Shih Tzu</option>
+												<option value="7">Other</option>
+												<option value="8" data-class="select__option--pen"></option>
+											</select>
+											<select name="age" data-speed="300" data-class-modif="form">
+												<option value="" selected>Age</option>
+												<option value="2">up to 6 month</option>
+												<option value="3">6 - 12 months</option>
+												<option value="4">1 - 3 years</option>
+												<option value="5">3 - 5 years</option>
+												<option value="6">more than 5 years</option>
+												<option value="7" data-class="select__option--pen"></option>
+											</select>
 										</div>
-
 										<div class="form__date">
-											<input autocomplete="off" required class="form__input input" data-datepicker type="text" name="date" placeholder="Select date" />
+											<input autocomplete="off" required class="form__input input" data-datepicker2 type="text" name="date" placeholder="Select date" />
 											<div class="form__img">
 												<img class="form__image ibg" src="img/icons/calendar.svg" alt="Image" />
 											</div>
 										</div>
-										<textarea autocomplete="off" data-autoheight class="input" name="textarea" id="textarea" placeholder="Type a message ...*"></textarea>
+										<textarea autocomplete="off" class="input" name="textarea" id="textarea-dog" placeholder="Type a message ...*"></textarea>
 									</div>
 									<div class="form__actions form__actions--center">
 										<button form="form-dog" type="submit" class="button button--br">
@@ -902,45 +888,65 @@
 								</form>
 							</div>
 							<div data-watch class="schedule__body schedule__body--br2">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Inventore delectus non voluptatum fugit earum est esse odio
-								rem ipsum enim. Modi est numquam doloribus laudantium, qui
-								quidem esse iure adipisci ad incidunt, eos veritatis amet
-								deleniti animi impedit officiis, labore rerum vitae neque
-								Lorem ipsum dolor sit amet consec Lorem ipsum dolor sit amet
-								consectetur adipisicing elit. Inventore delectus non
-								voluptatum fugit earum est esse odio rem ipsum enim. Modi est
-								numquam doloribus laudantium, qui quidem esse iure adipisci ad
-								incidunt, eos veritatis amet deleniti animi impedit officiis,
-								labore rerum vitae neque Lorem ipsum dolor sit amet
-								consectetur adipisicing elit. Inventore delectus non
-								voluptatum fugit earum est esse odio rem ipsum enim. Modi est
-								numquam doloribus laudantium, qui i quidem esse iure adipisci
-								ad incidunt, eos veritatis amet deleniti animi Lorem ipsum
-								dolor sit amet consectetur adipisicing elit. Inventore
-								delectus non voluptatum fugit earum est esse odio rem ipsum
-								enim. Modi est numquam doloribus laudantium, qui quidem esse
-								iure adipisci ad incidunt, eos veritatis amet deleniti animi
-								impedit officiis, labore rerum vitae neque Lorem ipsum dolor
-								sit amet consectetur adipisicing elit. Inventore delectus non
-								voluptatum fugit earum est esse odio rem ipsum enim. Modi est
-								numquam doloribus laudantium, qui i quidem esse iure adipisci
-								ad incidunt, eos veritatis amet deleniti animi impedit
-								officiis, labore rerum vitae neque dolor sit amet consectetur
-								adipisicing elit. Inventore delectus non voluptatum fugit
-								earum est esse odio rem ipsum enim. Modi est numquam doloribus
-								laudantium, qui quidem esse iure adipisci ad incidunt, eos
-								veritatis amet deleniti animi impedit officiis, labore rerum
-								vitae neque Lorem ipsum dolor sit amet consectetur adipisicing
-								elit. Inventore delectus non voluptatum fugit earum est esse
-								odio rem ipsum enim. Modi est numquam doloribus laudantium,
-								qui i quidem esse iure adipisci ad incidunt, eos veritatis
-								amet deleniti animi impedit officiis, labore rerum vitae
-								nequetetur adipisicing elit. Inventore delectus non voluptatum
-								fugit earum est esse odio rem ipsum enim. Modi est numquam
-								doloribus laudantium, qui i quidem esse iure adipisci ad
-								incidunt, eos veritatis amet deleniti animi impedit officiis,
-								labore rerum vitae neque
+								<!--  method="POST" method="GET" -->
+								<form netlify class="form" id="form-cat" name="form-cat" method="POST">
+									<div class="form__header">
+										<h2 class="form__title">
+											Schedule Your Pet's Grooming Today
+										</h2>
+										<div class="form__text text">
+											Experience the best grooming services for your beloved
+											pets. Schedule an appointment with us now!
+										</div>
+									</div>
+									<div class="form__content">
+										<div class="form__columns">
+											<input data-required data-validate required autocomplete="off" class="form__input input" id="name-cat" name="name" type="text" placeholder="Name: *" />
+											<input autocomplete="off" data-required data-validate required pattern="^\d{10,12}$" class="form__input input" id="phone-cat" name="phone" type="tel" placeholder="Phone number: *" />
+										</div>
+										<select name="service" data-speed="300" data-class-modif="form">
+											<option value="" selected>Service</option>
+											<option value="2">Bathing dogs</option>
+											<option value="3">Hygienic complex</option>
+											<option value="4">Home haircut</option>
+											<option value="5">Comprehensive care</option>
+											<option value="6" data-class="select__option--pen"></option>
+										</select>
+										<div class="form__columns">
+											<select name="breed" data-speed="300" data-class-modif="form">
+												<option value="" selected>Breed</option>
+												<option value="2">Maltipoo</option>
+												<option value="3">Poodle</option>
+												<option value="4">Labradoodle</option>
+												<option value="5">Cockapoo</option>
+												<option value="6">Shih Tzu</option>
+												<option value="7">Other</option>
+												<option value="8" data-class="select__option--pen"></option>
+											</select>
+											<select name="age" data-speed="300" data-class-modif="form">
+												<option value="" selected>Age</option>
+												<option value="2">up to 6 month</option>
+												<option value="3">6 - 12 months</option>
+												<option value="4">1 - 3 years</option>
+												<option value="5">3 - 5 years</option>
+												<option value="6">more than 5 years</option>
+												<option value="7" data-class="select__option--pen"></option>
+											</select>
+										</div>
+										<div class="form__date">
+											<input autocomplete="off" required class="form__input input" data-datepicker type="text" name="date" placeholder="Select date" />
+											<div class="form__img">
+												<img class="form__image ibg" src="img/icons/calendar.svg" alt="Image" />
+											</div>
+										</div>
+										<textarea autocomplete="off" class="input" name="textarea" id="textarea-cat" placeholder="Type a message ...*"></textarea>
+									</div>
+									<div class="form__actions form__actions--center">
+										<button form="form-cat" type="submit" class="button button--br">
+											Schedule a Visit
+										</button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -1151,7 +1157,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250214124936"></script>
+	<script src="js/app.min.js?_v=20250218101633"></script>
 </body>
 
 </html>
