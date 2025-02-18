@@ -1931,7 +1931,8 @@ html.menu-open .header__actions {
 .item-blog__time {
   font-size: .875rem;
   font-weight: 500;
-  line-height: 150%
+  line-height: 150%;
+  white-space: nowrap
 }
 [data-ba] {
   position: relative
