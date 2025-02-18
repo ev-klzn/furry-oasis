@@ -994,7 +994,20 @@ svg {
   overflow: hidden;
   border-radius: .5rem
 }
+.card-hover .item-blog__image {
+  overflow: hidden;
+  border-radius: .5rem
+}
+.card-hover .item-blog__img {
+  overflow: hidden;
+  border-radius: .5rem
+}
+.card-hover .item-blog__img-wrapper {
+  overflow: hidden;
+  border-radius: .5rem
+}
 .card-hover img {
+  border-radius: .5rem;
   overflow: hidden;
   -webkit-transform: scale(1.000001);
   transform: scale(1.000001);
@@ -1846,11 +1859,13 @@ html.menu-open .header__actions {
   -webkit-line-clamp: 11
 }
 .blog__center .item-blog__img {
+  border-radius: .5rem;
   display: flex;
   gap: 1rem;
   max-height: 9.5rem
 }
 .blog__center .item-blog__image {
+  overflow: hidden;
   aspect-ratio: 1/1
 }
 .item-blog {
@@ -1860,6 +1875,7 @@ html.menu-open .header__actions {
   padding: 1rem
 }
 .item-blog__img {
+  border-radius: .5rem;
   flex: 1 0 14.1875rem;
   overflow: hidden
 }
