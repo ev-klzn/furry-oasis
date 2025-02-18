@@ -277,7 +277,8 @@ input:invalid {
   border: .0625rem solid transparent;
   background: #fff;
   padding: 1rem 1.5rem;
-  border-radius: 1.875rem
+  border-radius: 1.875rem;
+  transition: all .3s
 }
 ._select-open .select__title {
   border-radius: 1.875rem 1.875rem 0 0
@@ -311,6 +312,7 @@ input:invalid {
   transform: rotate(180deg)
 }
 .select__value {
+  transition: all .3s;
   display: flex;
   min-width: 0;
   align-items: center;
@@ -361,9 +363,12 @@ input:invalid {
   left: 0;
   background: var(--beige-opacity-80,rgba(255,250,242,.8));
   border-top: 0;
-  border-top: 0;
-  border-radius: 0 0 1.875rem 1.875rem;
-  overflow: hidden
+  overflow: hidden;
+  border-radius: 1.875rem;
+  transition: all .3s
+}
+._select-open .select__options {
+  border-radius: 0 0 1.875rem 1.875rem
 }
 .select__scroll {
   overflow-y: auto;
@@ -1180,6 +1185,9 @@ html.menu-open .header__actions {
   background: rgba(0,0,0,0);
   backdrop-filter: blur(0)
 }
+.page__contact {
+  padding-bottom: 3.75rem
+}
 .hero {
   position: relative;
   color: var(--white,#fff);
@@ -1790,6 +1798,124 @@ html.menu-open .header__actions {
   width: 1.5rem;
   height: 1.5rem;
   aspect-ratio: 24/24
+}
+.contact {
+  background: var(--dark-burgundi,#74273e)
+}
+.contact .block-header h2,
+.contact .block-header p {
+  color: var(--white,#fff)
+}
+.contact .block-header .block-header__line::before {
+  background-color: var(--white,#fff)
+}
+.form-contact {
+  display: flex;
+  justify-content: end;
+  gap: 1.5rem
+}
+.form-contact__input {
+  max-width: 28.75rem
+}
+.blog {
+  background: var(--light-burg,#fdf3f4)
+}
+.blog .button {
+  padding: .25rem 1rem;
+  font-size: .875rem
+}
+.blog__list {
+  display: grid;
+  grid-template-columns: .71fr 1fr
+}
+.blog__start {
+  display: flex;
+  flex-direction: column
+}
+.blog__center {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
+.blog__center .item-blog {
+  flex-direction: column
+}
+.blog__center .text {
+  gap: .625rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  -webkit-line-clamp: 11
+}
+.blog__center .item-blog__img {
+  display: flex;
+  gap: 1rem;
+  max-height: 9.5rem
+}
+.blog__center .item-blog__image {
+  aspect-ratio: 1/1
+}
+.item-blog {
+  display: flex;
+  gap: 1.5rem;
+  background: rgba(116,39,62,.9);
+  padding: 1rem
+}
+.item-blog__img {
+  flex: 1 0 14.1875rem;
+  overflow: hidden
+}
+.item-blog__image {
+  border-radius: .5rem;
+  aspect-ratio: 228/268;
+  overflow: hidden
+}
+.item-blog--oneimg .item-blog__img {
+  max-height: 13.25rem
+}
+.item-blog--oneimg .item-blog__image {
+  aspect-ratio: 490/212
+}
+.item-blog--oneimg .text {
+  gap: .625rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  -webkit-line-clamp: 8
+}
+.item-blog__body {
+  color: var(--white,#fff)
+}
+.item-blog__title {
+  color: var(--white,#fff);
+  font-family: "Poiret One";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%
+}
+.item-blog__text {
+  color: var(--white,#fff);
+  padding-bottom: .625rem;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  gap: .625rem
+}
+.item-blog__text p:not(:last-child) {
+  margin-bottom: .9375rem
+}
+.item-blog__actions {
+  display: flex;
+  justify-content: space-between
+}
+.item-blog__aside {
+  display: flex;
+  gap: 1.5rem;
+  align-items: end
+}
+.item-blog__time {
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 150%
 }
 [data-ba] {
   position: relative
@@ -2553,6 +2679,15 @@ button.swiper-pagination-bullet {
   .page__visit {
     margin-bottom: 6.25rem
   }
+  .page__contact {
+    padding-top: 3.75rem
+  }
+  .page__contact {
+    margin-bottom: 6.25rem
+  }
+  .page__blog {
+    padding-bottom: 11.875rem
+  }
   .hero__title {
     margin-bottom: 1.5rem
   }
@@ -2637,6 +2772,36 @@ button.swiper-pagination-bullet {
   .form__title {
     font-size: 3rem
   }
+  .contact .block-header {
+    margin-bottom: 3.125rem
+  }
+  .blog .block-header {
+    padding-top: 8.75rem
+  }
+  .blog .block-header {
+    padding-bottom: 5rem
+  }
+  .blog__list {
+    gap: 1.25rem
+  }
+  .blog__start {
+    gap: 1.25rem
+  }
+  .blog__center {
+    gap: 1.25rem
+  }
+  .blog__center .item-blog__actions {
+    margin-bottom: 2.5rem
+  }
+  .item-blog__title {
+    font-size: 1.5rem
+  }
+  .item-blog__title {
+    margin-bottom: 1.5rem
+  }
+  .item-blog__text {
+    margin-bottom: 1.5rem
+  }
 }
 @media (min-width:120em) {
   .block-header--lr {
@@ -2677,6 +2842,9 @@ button.swiper-pagination-bullet {
   }
   .schedule__body {
     padding-right: 4.5625rem
+  }
+  .form-contact {
+    padding-right: 12.1875rem
   }
 }
 @media (min-width:215em) {
@@ -2742,6 +2910,9 @@ button.swiper-pagination-bullet {
   .testimonials__list {
     grid-template-columns: repeat(3,1fr)
   }
+  .blog__list {
+    grid-template-columns: auto
+  }
 }
 @media (max-width:75em) {
   .hero__more {
@@ -2806,6 +2977,9 @@ button.swiper-pagination-bullet {
     padding-left: 1rem
   }
   .schedule__body {
+    padding-right: 1rem
+  }
+  .form-contact {
     padding-right: 1rem
   }
 }
@@ -3150,6 +3324,15 @@ button.swiper-pagination-bullet {
     flex-direction: column;
     gap: 1.5rem
   }
+  .form-contact {
+    flex-direction: column
+  }
+  .form-contact__input {
+    max-width: 100%
+  }
+  .item-blog {
+    flex-direction: column
+  }
 }
 @media (max-width:47.9375em) {
   .hero__g-image {
@@ -3268,6 +3451,15 @@ button.swiper-pagination-bullet {
   .page__visit {
     margin-bottom: 3.75rem
   }
+  .page__contact {
+    padding-top: 2.5rem
+  }
+  .page__contact {
+    margin-bottom: 1.875rem
+  }
+  .page__blog {
+    padding-bottom: 3.75rem
+  }
   .hero__title {
     margin-bottom: .75rem
   }
@@ -3356,6 +3548,36 @@ button.swiper-pagination-bullet {
   .form__title {
     font-size: 2rem
   }
+  .contact .block-header {
+    margin-bottom: 2.5rem
+  }
+  .blog .block-header {
+    padding-top: 2.5rem
+  }
+  .blog .block-header {
+    padding-bottom: 2rem
+  }
+  .blog__list {
+    gap: 1rem
+  }
+  .blog__start {
+    gap: 1rem
+  }
+  .blog__center {
+    gap: 1rem
+  }
+  .blog__center .item-blog__actions {
+    margin-bottom: 1rem
+  }
+  .item-blog__title {
+    font-size: 1.25rem
+  }
+  .item-blog__title {
+    margin-bottom: 1rem
+  }
+  .item-blog__text {
+    margin-bottom: 1rem
+  }
 }
 @media (max-width:22.8125em) {
   .hero__g-image {
@@ -3425,6 +3647,15 @@ button.swiper-pagination-bullet {
   }
   .page__visit {
     margin-bottom: clamp(3.75rem ,3.1578947368rem + 2.6315789474vw ,6.25rem)
+  }
+  .page__contact {
+    padding-top: clamp(2.5rem ,2.2039473684rem + 1.3157894737vw ,3.75rem)
+  }
+  .page__contact {
+    margin-bottom: clamp(1.875rem ,.8388157895rem + 4.6052631579vw ,6.25rem)
+  }
+  .page__blog {
+    padding-bottom: clamp(3.75rem ,1.8256578947rem + 8.5526315789vw ,11.875rem)
   }
   .hero__title {
     margin-bottom: clamp(.75rem ,.5723684211rem + .7894736842vw ,1.5rem)
@@ -3510,6 +3741,36 @@ button.swiper-pagination-bullet {
   .form__title {
     font-size: clamp(2rem ,1.7631578947rem + 1.0526315789vw ,3rem)
   }
+  .contact .block-header {
+    margin-bottom: clamp(2.5rem ,2.3519736842rem + .6578947368vw ,3.125rem)
+  }
+  .blog .block-header {
+    padding-top: clamp(2.5rem ,1.0197368421rem + 6.5789473684vw ,8.75rem)
+  }
+  .blog .block-header {
+    padding-bottom: clamp(2rem ,1.2894736842rem + 3.1578947368vw ,5rem)
+  }
+  .blog__list {
+    gap: clamp(1rem ,.9407894737rem + .2631578947vw ,1.25rem)
+  }
+  .blog__start {
+    gap: clamp(1rem ,.9407894737rem + .2631578947vw ,1.25rem)
+  }
+  .blog__center {
+    gap: clamp(1rem ,.9407894737rem + .2631578947vw ,1.25rem)
+  }
+  .blog__center .item-blog__actions {
+    margin-bottom: clamp(1rem ,.6447368421rem + 1.5789473684vw ,2.5rem)
+  }
+  .item-blog__title {
+    font-size: clamp(1.25rem ,1.1907894737rem + .2631578947vw ,1.5rem)
+  }
+  .item-blog__title {
+    margin-bottom: clamp(1rem ,.8815789474rem + .5263157895vw ,1.5rem)
+  }
+  .item-blog__text {
+    margin-bottom: clamp(1rem ,.8815789474rem + .5263157895vw ,1.5rem)
+  }
 }
 @media (min-width:48em)and (max-width:215em) {
   [class*=__container] {
@@ -3558,6 +3819,9 @@ button.swiper-pagination-bullet {
   }
   .schedule__body {
     padding-right: clamp(1rem ,-2.8081896552rem + 6.1422413793vw ,4.5625rem)
+  }
+  .form-contact {
+    padding-right: clamp(1rem ,-10.9590517241rem + 19.2887931034vw ,12.1875rem)
   }
 }
 @media (min-width:47.99875em)and (min-width:64em)and (max-width:215em) {
