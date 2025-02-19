@@ -1072,19 +1072,6 @@ svg {
 .block-header--l .block-header__lines {
   grid-template-columns: minmax(9.375rem,47.1875rem) 1fr
 }
-.container {
-  position: relative;
-  width: 400px;
-  height: 300px
-}
-.block {
-  background: #a67c86;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  position: absolute;
-  clip-path: path("M 0 20 A 20 20 0 0 1 20 0 H 380 A 20 20 0 0 1 400 20 V 280 A 20 20 0 0 1 380 300 H 220 A 20 20 0 0 1 200 280 V 140 A 20 20 0 0 0 180 120 H 20 A 20 20 0 0 1 0 100 Z")
-}
 .header {
   position: fixed;
   width: 100%;
@@ -1739,6 +1726,7 @@ html.menu-open .header__actions {
   line-height: 120%
 }
 .schedule__img {
+  display: block;
   overflow: hidden;
   max-width: 18.75rem
 }
@@ -1983,7 +1971,7 @@ html.menu-open .header__actions {
 }
 .gallery-ba__arrow {
   background-color: var(--white,#fff);
-  width: toRem(4)
+  width: 4px
 }
 @font-face {
   font-family: swiper-icons;

@@ -20,7 +20,7 @@
 	<meta name="description" content="Furry Oasis - Furry Oasis">
 	<meta name="robots" content="noindex, nofollow">
 	<title>Furry Oasis - Furry Oasis</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250219114432">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250219122431">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -813,16 +813,16 @@
 					<div data-tabs class="schedule">
 						<nav data-tabs-titles class="schedule__navigation">
 							<button type="button" class="schedule__button _tab-active">
-								<div class="schedule__img">
+								<span class="schedule__img">
 									<img class="schedule__image ibg" src="img/schedule/dog.webp" alt="dog" />
-								</div>
-								<h3 class="schedule__title">Dog</h3>
+								</span>
+								<div class="schedule__title">Dog</div>
 							</button>
 							<button type="button" class="schedule__button">
-								<div class="schedule__img">
+								<span class="schedule__img">
 									<img class="schedule__image ibg" src="img/schedule/cat.webp" alt="cat" />
-								</div>
-								<h3 class="schedule__title">Cat</h3>
+								</span>
+								<div class="schedule__title">Cat</div>
 							</button>
 						</nav>
 						<div data-tabs-body data-watch data-watch-once class="schedule__content">
@@ -844,32 +844,54 @@
 											<input autocomplete="off" data-required data-validate required pattern="^\d{10,12}$" class="form__input input" id="phone-dog" name="phone" type="tel" placeholder="Phone number: *" />
 										</div>
 										<select name="service" data-speed="300" data-class-modif="form">
-											<option value="" selected>Service</option>
-											<option value="2">Bathing dogs</option>
-											<option value="3">Hygienic complex</option>
-											<option value="4">Home haircut</option>
-											<option value="5">Comprehensive care</option>
-											<option value="6" data-class="select__option--pen"></option>
+											<option label="Service" value="" selected>
+												Service
+											</option>
+											<option label="Bathing dogs" value="2">
+												Bathing dogs
+											</option>
+											<option label="Hygienic complex" value="3">
+												Hygienic complex
+											</option>
+											<option label="Home haircut" value="4">
+												Home haircut
+											</option>
+											<option label="Comprehensive care" value="5">
+												Comprehensive care
+											</option>
+											<option label="no select" value="6" data-class="select__option--pen"></option>
 										</select>
 										<div class="form__columns">
 											<select name="breed" data-speed="300" data-class-modif="form">
-												<option value="" selected>Breed</option>
-												<option value="2">Maltipoo</option>
-												<option value="3">Poodle</option>
-												<option value="4">Labradoodle</option>
-												<option value="5">Cockapoo</option>
-												<option value="6">Shih Tzu</option>
-												<option value="7">Other</option>
-												<option value="8" data-class="select__option--pen"></option>
+												<option label="Breed" value="" selected>Breed</option>
+												<option label="Maltipoo" value="2">Maltipoo</option>
+												<option label="Poodle" value="3">Poodle</option>
+												<option label="Labradoodle" value="4">
+													Labradoodle
+												</option>
+												<option label="Cockapoo" value="5">Cockapoo</option>
+												<option label="Shih Tzu" value="6">Shih Tzu</option>
+												<option label="Other" value="7">Other</option>
+												<option label="no select" value="8" data-class="select__option--pen"></option>
 											</select>
 											<select name="age" data-speed="300" data-class-modif="form">
-												<option value="" selected>Age</option>
-												<option value="2">up to 6 month</option>
-												<option value="3">6 - 12 months</option>
-												<option value="4">1 - 3 years</option>
-												<option value="5">3 - 5 years</option>
-												<option value="6">more than 5 years</option>
-												<option value="7" data-class="select__option--pen"></option>
+												<option label="Age" value="" selected>Age</option>
+												<option label="up to 6 month" value="2">
+													up to 6 month
+												</option>
+												<option label="6 - 12 months" value="3">
+													6 - 12 months
+												</option>
+												<option label="1 - 3 years" value="4">
+													1 - 3 years
+												</option>
+												<option label="3 - 5 years" value="5">
+													3 - 5 years
+												</option>
+												<option label="more than 5 years" value="6">
+													more than 5 years
+												</option>
+												<option label="no select" value="7" data-class="select__option--pen"></option>
 											</select>
 										</div>
 										<div class="form__date">
@@ -905,31 +927,51 @@
 											<input autocomplete="off" data-required data-validate required pattern="^\d{10,12}$" class="form__input input" id="phone-cat" name="phone" type="tel" placeholder="Phone number: *" />
 										</div>
 										<select name="service" data-speed="300" data-class-modif="form">
-											<option value="" selected>Service</option>
-											<option value="2">Care for cats</option>
-											<option value="3">Nails trim</option>
-											<option value="4">Cleaning teeth</option>
-											<option value="5" data-class="select__option--pen"></option>
+											<option label="Service" value="" selected>
+												Service
+											</option>
+											<option label="Care for cats" value="2">
+												Care for cats
+											</option>
+											<option label="Nails trim" value="3">Nails trim</option>
+											<option label="Cleaning teeth" value="4">
+												Cleaning teeth
+											</option>
+											<option label="no select" value="5" data-class="select__option--pen"></option>
 										</select>
 										<div class="form__columns">
 											<select name="breed" data-speed="300" data-class-modif="form">
-												<option value="" selected>Breed</option>
-												<option value="2">1</option>
-												<option value="3">2</option>
-												<option value="4">3</option>
-												<option value="5">4</option>
-												<option value="6">5</option>
-												<option value="7">6</option>
-												<option value="8" data-class="select__option--pen"></option>
+												<option label="Breed" value="" selected>Breed</option>
+												<option label="Maine Coon" value="2">
+													Maine Coon
+												</option>
+												<option label="Persian" value="3">Persian</option>
+												<option label="Siamese" value="4">Siamese</option>
+												<option label="British Shorthair" value="5">
+													British Shorthair
+												</option>
+												<option label="Bengal" value="6">Bengal</option>
+												<option label="Other" value="7">Other</option>
+												<option label="no select" value="8" data-class="select__option--pen"></option>
 											</select>
 											<select name="age" data-speed="300" data-class-modif="form">
-												<option value="" selected>Age</option>
-												<option value="2">up to 6 month</option>
-												<option value="3">6 - 12 months</option>
-												<option value="4">1 - 3 years</option>
-												<option value="5">3 - 5 years</option>
-												<option value="6">more than 5 years</option>
-												<option value="7" data-class="select__option--pen"></option>
+												<option label="Age" value="" selected>Age</option>
+												<option label="up to 6 month" value="2">
+													up to 6 month
+												</option>
+												<option label="6 - 12 months" value="3">
+													6 - 12 months
+												</option>
+												<option label="1 - 3 years" value="4">
+													1 - 3 years
+												</option>
+												<option label="3 - 5 years" value="5">
+													3 - 5 years
+												</option>
+												<option label="more than 5 years" value="6">
+													more than 5 years
+												</option>
+												<option value="7" label="no select" data-class="select__option--pen"></option>
 											</select>
 										</div>
 										<div class="form__date">
@@ -1015,13 +1057,13 @@
 											<div class="item-blog__tag button">Grooming</div>
 											<div class="item-blog__time">5 min read</div>
 										</div>
-										<button class="item-blog__button">
+										<div class="item-blog__button">
 											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 26 27" fill="none">
 												<path d="M1 13.3881H25" stroke="white" stroke-width="2" stroke-linecap="round" />
 												<path d="M25 13.3881L12.6757 1.54395" stroke="white" stroke-width="2" stroke-linecap="round" />
 												<path d="M25 13.6998L12.6757 25.5439" stroke="white" stroke-width="2" stroke-linecap="round" />
 											</svg>
-										</button>
+										</div>
 									</div>
 								</div>
 							</a>
@@ -1050,13 +1092,13 @@
 											<div class="item-blog__tag button">Health</div>
 											<div class="item-blog__time">5 min read</div>
 										</div>
-										<button class="item-blog__button">
+										<div class="item-blog__button">
 											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 26 27" fill="none">
 												<path d="M1 13.3881H25" stroke="white" stroke-width="2" stroke-linecap="round" />
 												<path d="M25 13.3881L12.6757 1.54395" stroke="white" stroke-width="2" stroke-linecap="round" />
 												<path d="M25 13.6998L12.6757 25.5439" stroke="white" stroke-width="2" stroke-linecap="round" />
 											</svg>
-										</button>
+										</div>
 									</div>
 								</div>
 							</a>
@@ -1069,13 +1111,13 @@
 											<div class="item-blog__tag button">Care</div>
 											<div class="item-blog__time">5 min read</div>
 										</div>
-										<button class="item-blog__button">
+										<div class="item-blog__button">
 											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 26 27" fill="none">
 												<path d="M1 13.3881H25" stroke="white" stroke-width="2" stroke-linecap="round" />
 												<path d="M25 13.3881L12.6757 1.54395" stroke="white" stroke-width="2" stroke-linecap="round" />
 												<path d="M25 13.6998L12.6757 25.5439" stroke="white" stroke-width="2" stroke-linecap="round" />
 											</svg>
-										</button>
+										</div>
 									</div>
 									<h3 class="item-blog__title">
 										The Benefits of Regular Grooming
@@ -1108,13 +1150,13 @@
 											<div class="item-blog__tag button">Grooming</div>
 											<div class="item-blog__time">5 min read</div>
 										</div>
-										<button class="item-blog__button">
+										<div class="item-blog__button">
 											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 26 27" fill="none">
 												<path d="M1 13.3881H25" stroke="white" stroke-width="2" stroke-linecap="round" />
 												<path d="M25 13.3881L12.6757 1.54395" stroke="white" stroke-width="2" stroke-linecap="round" />
 												<path d="M25 13.6998L12.6757 25.5439" stroke="white" stroke-width="2" stroke-linecap="round" />
 											</svg>
-										</button>
+										</div>
 									</div>
 									<h3 class="item-blog__title">
 										How to Choose the Right Groomer
@@ -1406,7 +1448,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250219114432"></script>
+	<script src="js/app.min.js?_v=20250219122431"></script>
 </body>
 
 </html>
