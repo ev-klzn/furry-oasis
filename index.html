@@ -20,7 +20,7 @@
 	<meta name="description" content="Furry Oasis - Furry Oasis">
 	<meta name="robots" content="noindex, nofollow">
 	<title>Furry Oasis - Furry Oasis</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250218172025">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250219114119">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -996,7 +996,7 @@
 										Trending in Pet Grooming: The Latest Styles and
 										Innovations
 									</h3>
-									<div class="item-blog__text text">
+									<div class="item-blog__text text truncate2">
 										<p>
 											Pet grooming is constantly evolving, with new trends and
 											techniques emerging to keep our furry friends looking
@@ -1034,7 +1034,7 @@
 										Personalized Grooming: Understanding Your Pet's Unique
 										Needs and Preferences
 									</h3>
-									<div class="item-blog__text text">
+									<div class="item-blog__text text truncate2">
 										<p>
 											Every pet is special, with their own personality,
 											sensitivities, and grooming requirements. A
@@ -1062,7 +1062,7 @@
 							</a>
 						</div>
 						<div class="blog__center">
-							<a href="#" class="item-blog card-hover">
+							<a href="#" class="item-blog item-blog--oneimg card-hover">
 								<div class="item-blog__body">
 									<div class="item-blog__actions">
 										<div class="item-blog__aside">
@@ -1080,7 +1080,7 @@
 									<h3 class="item-blog__title">
 										The Benefits of Regular Grooming
 									</h3>
-									<div class="item-blog__text text">
+									<div class="item-blog__text text truncate">
 										<p>
 											Grooming is an essential part of pet care, going far
 											beyond just making your furry friend look good. Regular
@@ -1088,10 +1088,7 @@
 											overall happiness. Whether you have a long-haired pup, a
 											short-coated cat, or any pet in between, routine
 											grooming offers numerous benefits that contribute to
-											their well-being.
-										</p>
-										<p>1. Promotes Healthy Skin and Coat</p>
-										<p>
+											their well-being. 1. Promotes Healthy Skin and Coat
 											Brushing and bathing help remove dirt, loose fur, and
 											dandruff, keeping your pet’s coat fresh and healthy.
 											Regular brushing also distributes natural oils
@@ -1100,16 +1097,8 @@
 										</p>
 									</div>
 								</div>
-								<div class="item-blog__img-wrapper">
-									<div class="item-blog__img">
-										<img class="item-blog__image ibg" src="img/blog/3.webp" alt="Image" />
-									</div>
-									<div class="item-blog__img">
-										<img class="item-blog__image ibg" src="img/blog/4.webp" alt="Image" />
-									</div>
-									<div class="item-blog__img">
-										<img class="item-blog__image ibg" src="img/blog/5.webp" alt="Image" />
-									</div>
+								<div class="item-blog__img">
+									<img class="item-blog__image ibg" src="img/blog/4.webp" alt="Image" />
 								</div>
 							</a>
 							<a href="#" class="item-blog item-blog--oneimg card-hover">
@@ -1130,24 +1119,21 @@
 									<h3 class="item-blog__title">
 										How to Choose the Right Groomer
 									</h3>
-									<div class="item-blog__text text">
+									<div class="item-blog__text text truncate">
 										<p>
 											Finding the perfect groomer for your pet is an important
 											decision. A good groomer doesn’t just make your pet look
 											great—they also ensure a safe, comfortable, and
 											stress-free experience. With so many options available,
 											knowing what to look for can help you make the best
-											choice for your furry friend.
-										</p>
-										<p>1. Check Qualifications and Experience</p>
-										<p>
-											A professional groomer should have proper training and
-											experience handling different breeds and coat types.
-											Look for certifications, years of experience, and
-											specialized skills, especially if your pet has unique
-											grooming needs. Experienced groomers will know how to
-											handle nervous pets and recognize potential health
-											concerns.
+											choice for your furry friend. 1. Check Qualifications
+											and Experience A professional groomer should have proper
+											training and experience handling different breeds and
+											coat types. Look for certifications, years of
+											experience, and specialized skills, especially if your
+											pet has unique grooming needs. Experienced groomers will
+											know how to handle nervous pets and recognize potential
+											health concerns.
 										</p>
 									</div>
 								</div>
@@ -1158,6 +1144,62 @@
 						</div>
 					</div>
 				</div>
+				<script>
+					function truncateText(selector, maxLines) {
+						document.querySelectorAll(selector).forEach((el) => {
+							let lineHeight = parseFloat(getComputedStyle(el).lineHeight);
+							let maxHeight = lineHeight * maxLines;
+							let originalText = el.dataset.fulltext || el.textContent.trim();
+							el.dataset.fulltext = originalText;
+							el.style.overflow = "hidden";
+							el.style.display = "-webkit-box";
+							el.style.webkitBoxOrient = "vertical";
+							el.style.webkitLineClamp = maxLines;
+							el.style.maxHeight = `${maxHeight}px`;
+							el.textContent = originalText;
+							if (el.scrollHeight > maxHeight) {
+								let truncatedText = originalText;
+								while (
+									el.scrollHeight > maxHeight &&
+									truncatedText.length > 0
+								) {
+									truncatedText = truncatedText.slice(0, -1);
+									el.textContent = truncatedText.trim() + "...";
+								}
+							}
+						});
+					}
+					truncateText(".truncate", 9);
+				</script>
+				<script>
+					function truncateText2(selector, maxLines) {
+						document.querySelectorAll(selector).forEach((el) => {
+							let lineHeight = parseFloat(getComputedStyle(el).lineHeight);
+							let maxHeight = lineHeight * maxLines;
+							let originalText = el.dataset.fulltext || el.textContent.trim();
+							el.dataset.fulltext = originalText;
+							el.style.overflow = "hidden";
+							el.style.display = "-webkit-box";
+							el.style.webkitBoxOrient = "vertical";
+							el.style.webkitLineClamp = maxLines;
+							el.style.maxHeight = `${maxHeight}px`;
+							el.textContent = originalText;
+							if (el.scrollHeight > maxHeight) {
+								let truncatedText2 = originalText;
+								while (
+									el.scrollHeight > maxHeight &&
+									truncatedText2.length > 0
+								) {
+									truncatedText2 = truncatedText2.slice(0, -1);
+									el.textContent = truncatedText2.trim() + "...";
+								}
+							}
+						});
+					}
+
+					// Применяем для всех элементов с классом `.truncate`
+					truncateText2(".truncate2", 5);
+				</script>
 			</section>
 			<div><!-- <div class="common">
   <h1 class="title title_link">title</h1>
@@ -1364,7 +1406,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250218172025"></script>
+	<script src="js/app.min.js?_v=20250219114119"></script>
 </body>
 
 </html>
