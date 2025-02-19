@@ -20,7 +20,7 @@
 	<meta name="description" content="Furry Oasis - Furry Oasis">
 	<meta name="robots" content="noindex, nofollow">
 	<title>Furry Oasis - Furry Oasis</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250219122431">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250219153743">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -262,7 +262,7 @@
 									</p>
 								</div>
 								<div class="about__actions">
-									<a class="button button--tr" href=".about.html">Learn More</a>
+									<a class="button button--tr" href="about.html">Learn More</a>
 								</div>
 							</div>
 							<div class="about__img">
@@ -458,7 +458,7 @@
 				</div>
 				<div class="services__cntr">
 					<div class="services__list">
-						<article class="service">
+						<article class="service service--one">
 							<div class="service__img">
 								<img class="service__image ibg" src="img/services/s-1-1.webp" alt="Image" />
 							</div>
@@ -470,7 +470,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="service">
+						<article class="service service--two">
 							<div class="service__img">
 								<img class="service__image ibg" src="img/services/s-2-2.webp" alt="Image" />
 							</div>
@@ -482,7 +482,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="service">
+						<article class="service service--three">
 							<div class="service__img">
 								<img class="service__image ibg" src="img/services/s-3-3.webp" alt="Image" />
 							</div>
@@ -494,7 +494,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="service">
+						<article class="service service--four">
 							<div class="service__img">
 								<img class="service__image ibg" src="img/services/s-4-4.webp" alt="Image" />
 							</div>
@@ -506,7 +506,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="service">
+						<article class="service service--five">
 							<div class="service__img">
 								<img class="service__image ibg" src="img/services/s-5-5.webp" alt="Image" />
 							</div>
@@ -518,7 +518,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="service">
+						<article class="service service--six">
 							<div class="service__img">
 								<img class="service__image ibg" src="img/services/s-6-6.webp" alt="Image" />
 							</div>
@@ -685,13 +685,13 @@
 						<div></div>
 						<div class="gallery__pagination"></div>
 						<div class="gallery__actions">
-							<button type="button" class="gallery__prev">
+							<button aria-label="gallery prev" type="button" class="gallery__prev">
 								<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#8C2B45" />
 									<path d="M32 23H19.83L25.42 17.41L24 16L16 24L24 32L25.41 30.59L19.83 25H32V23Z" fill="#8C2B45" />
 								</svg>
 							</button>
-							<button type="button" class="gallery__next">
+							<button aria-label="gallery next" type="button" class="gallery__next">
 								<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#8C2B45" />
 									<path d="M24 16L22.59 17.41L28.17 23H16V25H28.17L22.59 30.59L24 32L32 24L24 16Z" fill="#8C2B45" />
@@ -814,15 +814,15 @@
 						<nav data-tabs-titles class="schedule__navigation">
 							<button type="button" class="schedule__button _tab-active">
 								<span class="schedule__img">
-									<img class="schedule__image ibg" src="img/schedule/dog.webp" alt="dog" />
+									<img class="schedule__image ibg" src="img/schedule/dog.webp" />
 								</span>
-								<div class="schedule__title">Dog</div>
+								<span class="schedule__title">Dog</span>
 							</button>
 							<button type="button" class="schedule__button">
 								<span class="schedule__img">
-									<img class="schedule__image ibg" src="img/schedule/cat.webp" alt="cat" />
+									<img class="schedule__image ibg" src="img/schedule/cat.webp" />
 								</span>
-								<div class="schedule__title">Cat</div>
+								<span class="schedule__title">Cat</span>
 							</button>
 						</nav>
 						<div data-tabs-body data-watch data-watch-once class="schedule__content">
@@ -1012,7 +1012,7 @@
 						<!-- <div></div> -->
 						<input data-required data-validate required autocomplete="off" class="form-contact__input input" id="contact-name" name="name" type="text" placeholder="Name: *" />
 						<input autocomplete="off" data-required data-validate required pattern="^\d{10,12}$" class="form-contact__input input" id="contact-phone" name="phone" type="tel" placeholder="Phone number: *" />
-						<button form="form-contact" type="submit" class="button button--">
+						<button form="form-contact" type="submit" class="button">
 							Get a Call
 						</button>
 					</form>
@@ -1185,6 +1185,9 @@
 							</a>
 						</div>
 					</div>
+					<div class="blog__actions">
+						<a class="button button--tr" href="blog.html">View All</a>
+					</div>
 				</div>
 				<script>
 					function truncateText(selector, maxLines) {
@@ -1299,9 +1302,83 @@
 			</div>
 		</main>
 		<footer class="footer">
-			<div class="footer__container">
+			<div class="footer__column">
+				<div class="footer__top">
+					<div class="footer__logo">
+						<img class="footer__image ibg" src="img/logo-color.svg" alt="Image" />
+					</div>
+					<div class="footer__social">
+						<a href="#" class="footer__imglink">
+							<img class="footer__simage ibg" src="img/icons/s-fb.svg" alt="Image" />
+						</a>
+						<a href="#" class="footer__imglink">
+							<img class="footer__simage ibg" src="img/icons/s-inst.svg" alt="Image" />
+						</a>
+						<a href="#" class="footer__imglink">
+							<img class="footer__simage ibg" src="img/icons/s-x.svg" alt="Image" />
+						</a>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div>© 2025 Furry Oasis. All rights reserved.</div>
+					<div>
+						Power by:
+						<a class="footer__link" target="_blank" href="https://webintersol.com/">
+							Web Interface Solutions</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer__column">
+				<a href="#" data-goto-header data-goto=".services" class="footer__link">Services</a>
+				<div class="footer__items">
+					<a href="#" data-goto-header data-goto=".service--one" class="footer__link footer__link--small">Bathing dogs</a>
+					<a href="#" data-goto-header data-goto=".service--two" class="footer__link footer__link--small">Hygienic complex</a>
+					<a href="#" data-goto-header data-goto=".service--three" class="footer__link footer__link--small">Home haircut</a>
+					<a href="#" data-goto-header data-goto=".service--four" class="footer__link footer__link--small">Comprehensive care</a>
+					<a href="#" data-goto-header data-goto=".service--five" class="footer__link footer__link--small">Care for cats</a>
+					<a href="#" data-goto-header data-goto=".service--six" class="footer__link footer__link--small">Additional services</a>
+				</div>
+			</div>
+			<div class="footer__column">
+				<h2 class="footer__title">Contact</h2>
+				<div class="footer__contact">
+					<address class="footer__box">
+						<div class="footer__start">We’re located:</div>
+						<div class="footer__end">437 Madison Ave, New York, NY 10022, USA</div>
+					</address>
+					<div class="footer__box">
+						<div class="footer__start">Phone:</div>
+						<div class="footer__end footer__end--color">
+							<div>01213 521 2490</div>
+							<div>01213 521 2896</div>
+						</div>
+					</div>
+
+					<div class="footer__schedule">
+						<div class="footer__start">Monday - Friday:</div>
+						<div class="footer__end footer__end--color">10.00am - 4.00pm</div>
+						<div class="footer__start">Saturday:</div>
+						<div class="footer__end footer__end--color">11.00am - 6.00pm</div>
+						<div class="footer__start">Sunday:</div>
+						<div class="footer__end footer__end--color">Closed</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__column">
+				<div class="footer__items footer__items--m">
+					<a href="#" data-goto-header data-goto=".about" class="footer__link">About Furry Oasis</a>
+					<a href="#" data-goto-header data-goto=".staff" class="footer__link">Specialists</a>
+					<a href="#" data-goto-header data-goto=".gallery" class="footer__link">Gallery</a>
+					<a href="#" data-goto-header data-goto=".testimonials" class="footer__link">Testimonials</a>
+				</div>
+				<div class="footer__terms">
+					<a class="footer__link" href="#">Privacy Policy</a>
+					<a class="footer__link" href="#">Terms of Service</a>
+					<a class="footer__link" href="#">Cookies Settings</a>
+				</div>
 			</div>
 		</footer>
+
 	</div>
 	<div>
 		<div id="popup-1" aria-hidden="true" class="popup">
@@ -1448,7 +1525,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250219122431"></script>
+	<script src="js/app.min.js?_v=20250219153743"></script>
 </body>
 
 </html>
