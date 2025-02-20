@@ -2813,9 +2813,6 @@ button.swiper-pagination-bullet {
     -moz-column-gap: 6.25rem;
     column-gap: 6.25rem
   }
-  .footer__logo {
-    margin-bottom: 2rem
-  }
   .page__about {
     padding-bottom: 4.375rem
   }
@@ -2977,6 +2974,9 @@ button.swiper-pagination-bullet {
   .block-header--l {
     padding-left: 12.1875rem
   }
+  .footer__logo {
+    margin-bottom: 2rem
+  }
   .hero {
     padding-left: 12.1875rem
   }
@@ -3090,6 +3090,9 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width:64em) {
+  .footer__logo {
+    margin-bottom: 1rem
+  }
   .hero {
     padding-top: 6.875rem
   }
@@ -3683,9 +3686,6 @@ button.swiper-pagination-bullet {
     -moz-column-gap: 2rem;
     column-gap: 2rem
   }
-  .footer__logo {
-    margin-bottom: 1rem
-  }
   .page__about {
     padding-bottom: 1.25rem
   }
@@ -3884,9 +3884,6 @@ button.swiper-pagination-bullet {
     -webkit-column-gap: clamp(2rem ,.9934210526rem + 4.4736842105vw ,6.25rem);
     -moz-column-gap: clamp(2rem ,.9934210526rem + 4.4736842105vw ,6.25rem);
     column-gap: clamp(2rem ,.9934210526rem + 4.4736842105vw ,6.25rem)
-  }
-  .footer__logo {
-    margin-bottom: clamp(1rem ,.7631578947rem + 1.0526315789vw ,2rem)
   }
   .page__about {
     padding-bottom: clamp(1.25rem ,.5098684211rem + 3.2894736842vw ,4.375rem)
@@ -4104,6 +4101,14 @@ button.swiper-pagination-bullet {
     padding-top: 9.375rem
   }
 }
+@media (min-width:64em)and (max-width:120em) {
+  .footer__logo {
+    margin-bottom: clamp(1rem ,-.1428571429rem + 1.7857142857vw ,2rem)
+  }
+  .about__content {
+    gap: clamp(2.5rem ,-5.3571428571rem + 12.2767857143vw ,9.375rem)
+  }
+}
 @media (min-width:64em)and (max-width:215em) {
   .hero {
     padding-top: clamp(6.875rem ,5.0206953642rem + 2.8973509934vw ,11.25rem)
@@ -4115,11 +4120,6 @@ button.swiper-pagination-bullet {
   }
   .hero__actions {
     margin-bottom: clamp(.75rem ,.3816964286rem + .4910714286vw ,1.4375rem)
-  }
-}
-@media (min-width:64em)and (max-width:120em) {
-  .about__content {
-    gap: clamp(2.5rem ,-5.3571428571rem + 12.2767857143vw ,9.375rem)
   }
 }
 @media (any-hover:hover) {
