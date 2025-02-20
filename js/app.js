@@ -5603,6 +5603,10 @@
                 spaceBetween: 24,
                 speed: 800,
                 loop: true,
+                autoplay: {
+                    delay: 4e3,
+                    disableOnInteraction: false
+                },
                 on: {}
             });
             if (document.querySelector(".steps__slider")) new swiper_core_Swiper(".steps__slider", {
@@ -5611,7 +5615,12 @@
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 24,
+                autoHeight: true,
                 speed: 800,
+                autoplay: {
+                    delay: 4e3,
+                    disableOnInteraction: false
+                },
                 pagination: {
                     el: ".steps__pagination",
                     clickable: true
@@ -5649,6 +5658,10 @@
                 spaceBetween: 16,
                 speed: 800,
                 loop: true,
+                autoplay: {
+                    delay: 4e3,
+                    disableOnInteraction: false
+                },
                 pagination: {
                     el: ".staff__pagination",
                     clickable: true
