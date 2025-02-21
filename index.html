@@ -20,7 +20,7 @@
 	<meta name="description" content="Furry Oasis - Furry Oasis">
 	<meta name="robots" content="noindex, nofollow">
 	<title>Furry Oasis - Furry Oasis</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250221102338">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250221104939">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -1525,7 +1525,173 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250221102338"></script>
+	<div>
+		<div id="fls-preloader">
+			<script>
+				function preloader() {
+					const preloaderImages = document.querySelector("[data-preloader]") ?
+						document.querySelectorAll("[data-preloader] img") :
+						document.querySelectorAll("img");
+
+					// Налаштування
+					const bgColor = "#000";
+					const textColor = "#002117";
+					const stroke = "#8c2b45";
+					const fill = "#000";
+					const strokeWidth = 1 + "%";
+
+					if (preloaderImages.length) {
+						const preloaderStyleTemplate = `
+				<style>
+					* {
+						padding: 0px;
+						margin: 0px;
+						border: 0px;
+						box-sizing: border-box;
+					}
+					/* Головний блок */
+					#fls-preloader{
+						pointer-events: none;
+						z-index: -1;
+						position: fixed;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+						display: flex;
+						justify-content:center;
+						align-items: center;
+						background-color: ${bgColor};
+						transition: opacity 0.3s ease, visibility 0.3s ease ;
+					}
+					/* Блок з елементами */
+					.fls-preloader-body{
+						position: relative;
+						width: 20%;
+						font-size: 8vw;
+						aspect-ratio: 1;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+					}
+
+					.preloader-counter{
+						position: relative;
+						text-align: center;
+						width: 100%;
+					}
+
+					img {
+						vertical-align: top;
+						}
+
+					.preloader-counter img{
+						width: 70%;
+						aspect-ratio: 160 / 40;
+					}
+					.lock body{
+						// overflow: hidden;
+						touch-action: none;
+						overscroll-behavior: none;
+					}
+
+					@media (max-width: 61.99875em) {
+						.fls-preloader-body{
+							width: 30%;
+						}
+					}
+
+					@media (max-width: 29.99875em) {
+						.fls-preloader-body{
+							width: 50%;
+						}
+					}
+				
+				</style>`;
+
+						document.head.insertAdjacentHTML("beforeend", preloaderStyleTemplate);
+
+						const preloaderTemplate = document.querySelector("#fls-preloader");
+
+						const preloaderBody = document.createElement("div");
+						preloaderBody.classList.add("fls-preloader-body");
+
+						const preloaderBodyWidth =
+							preloaderTemplate.appendChild(preloaderBody).offsetWidth;
+
+						const preloaderPrg = `
+						<svg style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; fill: ${fill}; stroke: ${stroke}; stroke-width: ${strokeWidth};">
+							<circle class="preloader-circle" stroke-linecap="round" cx=${preloaderBodyWidth / 2} cy=${preloaderBodyWidth / 2} r="${(preloaderBodyWidth * (1 - parseFloat(strokeWidth) / 100)) / 2}"></circle>
+						</svg>
+						<div class="preloader-counter"> 
+							<img src="img/logo.svg" alt="loader">
+						</div>
+				`;
+
+						preloaderBody.insertAdjacentHTML("beforeend", preloaderPrg);
+						document.body.appendChild(preloaderTemplate);
+
+						const counter = document.querySelector(".preloader-counter");
+
+						const preloaderCircle = document.querySelector(".preloader-circle");
+						const totalLength = preloaderCircle.getTotalLength();
+
+						preloaderCircle.setAttribute("stroke-dasharray", totalLength);
+						preloaderCircle.setAttribute("stroke-dashoffset", totalLength);
+
+						setTimeout(() => {
+							preloaderCircle.style.transition = "stroke-dashoffset 0.3s linear";
+						}, 0);
+
+						htmlDocument = document.documentElement;
+						let imagesLoadedCount = (progress = 0);
+
+						htmlDocument.classList.add("loading");
+						htmlDocument.classList.add("lock");
+
+						preloaderImages.forEach((preloaderImage) => {
+							const imgClone = document.createElement("img");
+							if (imgClone) {
+								imgClone.onload = imageLoaded;
+								imgClone.onerror = imageLoaded;
+								preloaderImage.dataset.src ?
+									(imgClone.src = preloaderImage.dataset.src) :
+									(imgClone.src = preloaderImage.src);
+							}
+						});
+
+						function setValueProgress(progress) {
+							preloaderCircle.setAttribute("stroke-dashoffset", progress);
+						}
+
+						function imageLoaded() {
+							imagesLoadedCount++;
+							progress = (totalLength / preloaderImages.length) * imagesLoadedCount;
+							setValueProgress(totalLength - progress);
+
+							if (Math.floor(progress) + 1 >= Math.floor(totalLength)) {
+								addLoadedClass();
+							} else null;
+						}
+
+						function addLoadedClass() {
+							htmlDocument.classList.add("loaded");
+							htmlDocument.classList.remove("lock");
+							htmlDocument.classList.remove("loading");
+							setInterval(() => {
+								preloaderTemplate.remove();
+							}, 100);
+						}
+					} else {
+						preloaderTemplate.remove();
+					}
+				}
+				preloader();
+			</script>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20250221104939"></script>
 </body>
 
 </html>
