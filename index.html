@@ -34,7 +34,7 @@
 			visibility: visible;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250221114150" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250221115352" />
 	<link rel="shortcut icon" href="favicon.ico" />
 </head>
 
@@ -204,7 +204,7 @@
 								<div class="hero__left">
 									<div class="hero__actions">
 										<a data-goto-header data-goto=".form" class="button button--fw" href="#">Visit</a>
-										<a data-goto-header data-goto=".form" class="button button--fw" href="#">Contact</a>
+										<a data-goto-header data-goto=".contact" class="button button--fw" href="#">Contact</a>
 									</div>
 									<a data-goto-header data-goto=".gallery" href="#" class="hero__gallery card-hover">
 										<div class="hero__subtitle">Gallery</div>
@@ -853,8 +853,8 @@
 									</div>
 									<div class="form__content">
 										<div class="form__columns">
-											<input data-required data-validate required autocomplete="off" class="form__input input" id="name-dog" name="name" type="text" placeholder="Name: *" />
-											<input autocomplete="off" data-required data-validate required pattern="^\d{10,12}$" class="form__input input" id="phone-dog" name="phone" type="tel" placeholder="Phone number: *" />
+											<input data-required data-validate required class="form__input input" id="name-dog" name="name" type="text" placeholder="Name: *" />
+											<input data-required data-validate required pattern="^\d{10,12}$" class="form__input input" id="phone-dog" name="phone" type="tel" placeholder="Phone number: *" />
 										</div>
 										<select name="service" data-speed="300" data-class-modif="form">
 											<option label="Service" value="" selected>
@@ -936,8 +936,8 @@
 									</div>
 									<div class="form__content">
 										<div class="form__columns">
-											<input data-required data-validate required autocomplete="off" class="form__input input" id="name-cat" name="name" type="text" placeholder="Name: *" />
-											<input autocomplete="off" data-required data-validate required pattern="^\d{10,12}$" class="form__input input" id="phone-cat" name="phone" type="tel" placeholder="Phone number: *" />
+											<input data-required data-validate required class="form__input input" id="name-cat" name="name" type="text" placeholder="Name: *" />
+											<input data-required data-validate required pattern="^\d{10,12}$" class="form__input input" id="phone-cat" name="phone" type="tel" placeholder="Phone number: *" />
 										</div>
 										<select name="service" data-speed="300" data-class-modif="form">
 											<option label="Service" value="" selected>
@@ -1022,9 +1022,9 @@
 
 				<div class="contact__form">
 					<form netlify name="contact" action="/contact" method="POST" id="form-contact" class="form-contact">
-						<!-- <div></div> -->
-						<input data-required data-validate required autocomplete="off" class="form-contact__input input" id="contact-name" name="name" type="text" placeholder="Name: *" />
-						<input autocomplete="off" data-required data-validate required pattern="^\d{10,12}$" class="form-contact__input input" id="contact-phone" name="phone" type="tel" placeholder="Phone number: *" />
+
+						<input data-required data-validate required class="form-contact__input input" id="contact-name" name="name" type="text" placeholder="Name: *" />
+						<input data-required data-validate required pattern="^\d{10,12}$" class="form-contact__input input" id="contact-phone" name="phone" type="tel" placeholder="Phone number: *" />
 						<button form="form-contact" type="submit" class="button">
 							Get a Call
 						</button>
@@ -1199,7 +1199,7 @@
 						</div>
 					</div>
 					<div class="blog__actions">
-						<a class="button button--tr" href="blog.html">View All</a>
+						<a class="button button--tr" href="#">View All</a>
 					</div>
 				</div>
 				<script>
@@ -1704,7 +1704,7 @@
 			</script>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250221114150"></script>
+	<script src="js/app.min.js?_v=20250221115352"></script>
 </body>
 
 </html>
