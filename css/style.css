@@ -795,39 +795,6 @@ body::after {
   border-radius: 50%;
   flex: 0 0 .5rem
 }
-.spollers__title {
-  width: 100%;
-  cursor: default;
-  text-align: left;
-  position: relative;
-  list-style: none
-}
-.spollers__title::-webkit-details-marker,
-.spollers__title::marker {
-  display: none
-}
-._spoller-init .spollers__title {
-  cursor: pointer
-}
-._spoller-init .spollers__title::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: inline-block;
-  background: url(../img/icons/arrow-top.svg) 0 0 no-repeat;
-  background-size: cover;
-  width: 24px;
-  height: 24px;
-  transition: all .5s ease 0s
-}
-._spoller-init .spollers__title._spoller-active::before {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg)
-}
-.spollers__body {
-  margin-top: 1.5rem
-}
 .tabs__navigation {
   display: flex
 }
@@ -1085,6 +1052,9 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5625rem;
+  position: relative;
+  top: 0;
+  left: 0;
   justify-content: space-between
 }
 .header__nav {
@@ -1094,20 +1064,17 @@ svg {
   transition: padding .3s,opacity .2s,-webkit-transform .3s;
   transition: transform .3s,padding .3s,opacity .2s;
   transition: transform .3s,padding .3s,opacity .2s,-webkit-transform .3s;
-  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
   justify-content: space-between;
   grid-template-columns: auto 1fr 55px;
   height: 0
 }
 .header__nav.active {
+  overflow: auto;
   padding: 1.875rem 2.5rem;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  height: auto;
-  opacity: 1;
+  height: 100%;
+  visibility: visible;
   pointer-events: all
 }
 .header__nav .header__logo img {
@@ -1148,16 +1115,11 @@ html .open span:nth-child(3) {
   transform: rotate(-45deg);
   opacity: 0
 }
-html.menu-open {
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s,-webkit-transform .3s
-}
 html.menu-open .header__nav {
+  transition: all .3s;
   padding-top: 3.75rem
 }
 html.menu-open .header__actions {
-  border-radius: 0;
   background: rgba(0,0,0,0);
   backdrop-filter: blur(0)
 }
@@ -1206,7 +1168,7 @@ html.menu-open .header__actions {
   transform: scale(1.0001)
 }
 .footer__simage {
-  max-width: 1.5rem
+  width: 1.5rem
 }
 .footer__bottom {
   display: grid;
@@ -3395,18 +3357,35 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width:47.99875em) {
+  .menu-open .header .header__links {
+    transition: all .3s;
+    opacity: 1
+  }
   .header {
     padding: 0 1rem
   }
   .header__links {
+    transition: all .3s;
     padding-top: 5.625rem;
     flex-direction: column;
-    align-items: flex-end
+    align-items: flex-end;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0
   }
   .header__nav {
+    transition: all .3s;
     padding-top: 3.75rem;
     align-items: flex-end;
-    padding-right: 2.5rem
+    padding-right: 2.5rem;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%
   }
   .header__nav .header__logo img {
     display: none;
@@ -3415,17 +3394,8 @@ button.swiper-pagination-bullet {
   .header__nav a {
     font-size: 1.875rem
   }
-  .header__nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%
-  }
   html.menu-open .header__nav {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    transition: all .3s;
     background-color: var(--dark-burgundi);
     padding-top: 0;
     display: flex;
@@ -3435,7 +3405,8 @@ button.swiper-pagination-bullet {
     justify-content: flex-start
   }
   html.menu-open .header__actions {
-    margin-top: 0
+    margin-top: 0;
+    background: #74273e
   }
   .footer {
     grid-template-columns: auto
@@ -3473,7 +3444,11 @@ button.swiper-pagination-bullet {
     margin-bottom: 1rem
   }
   .footer__social {
-    justify-content: center
+    justify-content: center;
+    gap: 1.25rem
+  }
+  .footer__simage {
+    width: 1.875rem
   }
   .footer__items {
     grid-template-columns: 1fr 1fr
