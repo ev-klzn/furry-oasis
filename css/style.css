@@ -1128,6 +1128,11 @@ html.menu-open .header__actions {
   background: rgba(0,0,0,0);
   backdrop-filter: blur(0)
 }
+html.menu-open .header__actions--clear .open span:nth-child(2) {
+  background: #fff;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
 .footer {
   background: var(--light-beige,#fffaf2);
   padding-top: 2.5rem;
@@ -3499,6 +3504,9 @@ button.swiper-pagination-bullet {
   .header__nav a {
     font-size: 1.875rem
   }
+  .icon-menu--clear span {
+    background: var(--dark-grey,#262626)
+  }
   html.menu-open .header__nav {
     transition: all .3s;
     background-color: #3a3a3a;
@@ -3516,9 +3524,11 @@ button.swiper-pagination-bullet {
   html.menu-open .header__actions .header__actions {
     background: #a68f96
   }
+  html.menu-open .header__actions--clear .open span:nth-child(2) {
+    background: var(--dark-grey,#262626)
+  }
   html.menu-open .header__actions--clear {
-    background: rgba(255,255,255,.5);
-    backdrop-filter: blur(17.5px)
+    background-color: rgba(255,249,240,.8)
   }
   .footer {
     grid-template-columns: auto
@@ -4330,6 +4340,9 @@ button.swiper-pagination-bullet {
   }
   .header__actions:hover {
     background: var(--dark-burgundi,#74273e)
+  }
+  .header__actions--clear:hover {
+    background: rgba(115,38,61,.6)
   }
   .header__nav a:hover {
     color: #fff
