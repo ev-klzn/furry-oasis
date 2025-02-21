@@ -14,14 +14,28 @@
 
     gtag("config", "G-Z068Y1ZDXC");
   </script> -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="description" content="Furry Oasis - Furry Oasis">
-	<meta name="robots" content="noindex, nofollow">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="description" content="Furry Oasis - Furry Oasis" />
+	<meta name="robots" content="noindex, nofollow" />
 	<title>Furry Oasis - Furry Oasis</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250221104939">
-	<link rel="shortcut icon" href="favicon.ico">
+	<style>
+		.loading body>*:not(#fls-preloader) {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.loaded body>*:not(#fls-preloader) {
+			transition:
+				opacity 0.3s ease 0.1s,
+				visibility 0.3s ease 0.1s;
+			opacity: 1;
+			visibility: visible;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20250221113447" />
+	<link rel="shortcut icon" href="favicon.ico" />
 </head>
 
 <body>
@@ -229,7 +243,7 @@
 					</div>
 				</div>
 				<div class="hero__vid">
-					<video class="hero__video ibg" src="img/hero/720.mp4" muted loop></video>
+					<video class="hero__video ibg" src="img/hero/720.mp4" muted autoplay loop></video>
 				</div>
 				<!-- autoplay -->
 			</section>
@@ -827,8 +841,7 @@
 						</nav>
 						<div data-tabs-body data-watch data-watch-once class="schedule__content">
 							<div data-watch class="schedule__body schedule__body--br1">
-								<!--  method="POST" method="GET" -->
-								<form netlify class="form" id="form-dog" name="form-dog" method="POST">
+								<form netlify class="form" id="form-dog" name="form-dog" action="/schedule" method="POST">
 									<div class="form__header">
 										<h2 class="form__title">
 											Schedule Your Pet's Grooming Today
@@ -911,7 +924,7 @@
 							</div>
 							<div data-watch class="schedule__body schedule__body--br2">
 								<!--  method="POST" method="GET" -->
-								<form netlify class="form" id="form-cat" name="form-cat" method="POST">
+								<form netlify class="form" id="form-cat" name="form-cat" action="/schedule" method="POST">
 									<div class="form__header">
 										<h2 class="form__title">
 											Schedule Your Pet's Grooming Today
@@ -1008,7 +1021,7 @@
 				</div>
 
 				<div class="contact__form">
-					<form id="form-contact" class="form-contact" action="GET">
+					<form netlify name="form-cat" action="/contact" method="POST" id="form-contact" class="form-contact">
 						<!-- <div></div> -->
 						<input data-required data-validate required autocomplete="off" class="form-contact__input input" id="contact-name" name="name" type="text" placeholder="Name: *" />
 						<input autocomplete="off" data-required data-validate required pattern="^\d{10,12}$" class="form-contact__input input" id="contact-phone" name="phone" type="tel" placeholder="Phone number: *" />
@@ -1349,8 +1362,8 @@
 					<div class="footer__box">
 						<div class="footer__start">Phone:</div>
 						<div class="footer__end footer__end--color">
-							<div>01213 521 2490</div>
-							<div>01213 521 2896</div>
+							<a href="tel:012135212490">01213 521 2490</a>
+							<a href="tel:012135212896">01213 521 2896</a>
 						</div>
 					</div>
 
@@ -1691,7 +1704,7 @@
 			</script>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250221104939"></script>
+	<script src="js/app.min.js?_v=20250221113447"></script>
 </body>
 
 </html>
