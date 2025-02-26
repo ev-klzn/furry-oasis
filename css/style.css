@@ -2203,16 +2203,14 @@ html.menu-open .header__actions--clear .open span:nth-child(2) {
   background: var(--light-burg,#fdf3f4);
   display: grid;
   align-items: center;
-  grid-template-columns: 1rem 1fr minmax(auto,95.875rem) 1fr .9fr
+  grid-template-columns: 1rem 1fr minmax(auto,87.375rem) 1fr .9fr
 }
 .blog-hero__content {
   grid-column: 1/6
 }
 .blog-hero__body {
   height: 100%;
-  flex-basis: 47.9375rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  flex-basis: 43.6875rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem
 }
@@ -2227,7 +2225,7 @@ html.menu-open .header__actions--clear .open span:nth-child(2) {
 }
 .blog-hero__img {
   flex-grow: 1;
-  flex-basis: 47.9375rem
+  flex-basis: 43.6875rem
 }
 .blog-hero__image {
   border-radius: 1.5rem 0 0 1.5rem;
@@ -3324,10 +3322,10 @@ button.swiper-pagination-bullet {
   .hygiene__container {
     gap: 20.625rem
   }
-  .content__container {
+  .content__cnt {
     padding-right: 12.1875rem
   }
-  .content__container {
+  .content__cnt {
     padding-left: 12.1875rem
   }
 }
@@ -3500,10 +3498,10 @@ button.swiper-pagination-bullet {
   .approach .block-header__text div:nth-child(2) {
     margin-right: .0000000625rem
   }
-  .content__container {
+  .content__cnt {
     padding-right: 1rem
   }
-  .content__container {
+  .content__cnt {
     padding-left: 1rem
   }
 }
@@ -4006,7 +4004,9 @@ button.swiper-pagination-bullet {
   }
   .blog-hero__body {
     padding-top: 6.5rem;
-    padding-bottom: 3.75rem
+    padding-bottom: 3.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem
   }
   .blog-hero__image {
     aspect-ratio: 360/300;
@@ -4647,10 +4647,10 @@ button.swiper-pagination-bullet {
   .approach .block-header__text div:nth-child(2) {
     margin-right: clamp(.0000000625rem ,-9.3534481466rem + 15.0862067888vw ,8.75rem)
   }
-  .content__container {
+  .content__cnt {
     padding-right: clamp(1rem ,-10.9590517241rem + 19.2887931034vw ,12.1875rem)
   }
-  .content__container {
+  .content__cnt {
     padding-left: clamp(1rem ,-10.9590517241rem + 19.2887931034vw ,12.1875rem)
   }
 }
