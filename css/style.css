@@ -1769,10 +1769,6 @@ html.menu-open .header__actions--clear .open span:nth-child(2) {
   transform: scale(1.000001);
   transition: all .3s
 }
-.gallery-ba__item img {
-  max-height: auto;
-  max-width: auto
-}
 .testimonials__list {
   display: grid;
   grid-template-columns: repeat(5,1fr);
