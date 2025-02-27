@@ -1887,13 +1887,7 @@ html.menu-open .header__actions--clear .open span:nth-child(2) {
   flex-direction: column;
   margin-left: -.0625rem;
   backdrop-filter: blur(17.5px);
-  transition: background-color .3s;
-  opacity: 0;
-  transition: opacity .3s;
-  transition-delay: .3s
-}
-.schedule__content._watcher-view {
-  opacity: 1
+  transition: background-color .3s
 }
 .schedule__body {
   background-color: var(--beige-opacity-80,rgba(255,250,242,.8));
