@@ -128,6 +128,9 @@ h6 {
   grid-column: 3/4
 }
 .button {
+  opacity: 0;
+  -webkit-transform: translate(0,5%);
+  transform: translate(0,5%);
   display: inline-flex;
   border-radius: 1.875rem;
   backdrop-filter: blur(1.09375rem);
@@ -137,7 +140,9 @@ h6 {
   font-weight: 400;
   line-height: 150%;
   white-space: nowrap;
-  transition: all .3s;
+  transition: color .3s,background-color .3s,opacity .3s ease .5s,-webkit-transform .3s ease .5s;
+  transition: color .3s,background-color .3s,transform .3s ease .5s,opacity .3s ease .5s;
+  transition: color .3s,background-color .3s,transform .3s ease .5s,opacity .3s ease .5s,-webkit-transform .3s ease .5s;
   justify-content: center;
   align-items: center;
   background: var(--white-opacity-30,hsla(0,0%,100%,.3));
@@ -146,6 +151,11 @@ h6 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   border: .0625rem solid transparent
+}
+.button._watcher-view {
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0);
+  opacity: 1
 }
 .button--opa {
   color: var(--white,#fff);
@@ -1637,23 +1647,11 @@ html.menu-open .header__actions--clear .open span:nth-child(2) {
   border-radius: .5rem
 }
 .services-hero__title {
-  opacity: 0;
-  -webkit-transform: translate(0,10%);
-  transform: translate(0,10%);
-  transition: opacity .5s,-webkit-transform .5s;
-  transition: transform .5s,opacity .5s;
-  transition: transform .5s,opacity .5s,-webkit-transform .5s;
   color: var(--white,#fff);
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
   line-height: 130%
-}
-.services-hero__title._watcher-view {
-  transition-delay: .1s;
-  -webkit-transform: translate(0,0);
-  transform: translate(0,0);
-  opacity: 1
 }
 .services-hero__text {
   padding-right: .1875rem;
