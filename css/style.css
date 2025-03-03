@@ -86,6 +86,13 @@ h6 {
   font-weight: inherit;
   font-size: inherit
 }
+::-webkit-scrollbar {
+  display: none
+}
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none
+}
 .lock body {
   overflow: hidden;
   touch-action: none;
