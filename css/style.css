@@ -1057,6 +1057,49 @@ body::-webkit-scrollbar {
 .block-header__text div._watcher-view:nth-child(10) {
   transition-delay: .95s
 }
+.block-header__text div p {
+  opacity: 0;
+  -webkit-transform: translate(0,10%);
+  transform: translate(0,10%);
+  transition: opacity .5s,-webkit-transform .5s;
+  transition: opacity .5s,transform .5s;
+  transition: opacity .5s,transform .5s,-webkit-transform .5s
+}
+.block-header__text div p._watcher-view {
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0)
+}
+.block-header__text div p._watcher-view:nth-child(1) {
+  transition-delay: 275ms
+}
+.block-header__text div p._watcher-view:nth-child(2) {
+  transition-delay: .35s
+}
+.block-header__text div p._watcher-view:nth-child(3) {
+  transition-delay: 425ms
+}
+.block-header__text div p._watcher-view:nth-child(4) {
+  transition-delay: .5s
+}
+.block-header__text div p._watcher-view:nth-child(5) {
+  transition-delay: 575ms
+}
+.block-header__text div p._watcher-view:nth-child(6) {
+  transition-delay: .65s
+}
+.block-header__text div p._watcher-view:nth-child(7) {
+  transition-delay: 725ms
+}
+.block-header__text div p._watcher-view:nth-child(8) {
+  transition-delay: .8s
+}
+.block-header__text div p._watcher-view:nth-child(9) {
+  transition-delay: 875ms
+}
+.block-header__text div p._watcher-view:nth-child(10) {
+  transition-delay: .95s
+}
 ul li {
   opacity: 0;
   -webkit-transform: translate(0,10%);
@@ -4236,6 +4279,41 @@ button.swiper-pagination-bullet {
     transition-delay: 109ms
   }
   .block-header__text div._watcher-view:nth-child(10) {
+    transition-delay: .11s
+  }
+  .block-header__text div p._watcher-view {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0)
+  }
+  .block-header__text div p._watcher-view:nth-child(1) {
+    transition-delay: 101ms
+  }
+  .block-header__text div p._watcher-view:nth-child(2) {
+    transition-delay: 102ms
+  }
+  .block-header__text div p._watcher-view:nth-child(3) {
+    transition-delay: 103ms
+  }
+  .block-header__text div p._watcher-view:nth-child(4) {
+    transition-delay: 104ms
+  }
+  .block-header__text div p._watcher-view:nth-child(5) {
+    transition-delay: 105ms
+  }
+  .block-header__text div p._watcher-view:nth-child(6) {
+    transition-delay: 106ms
+  }
+  .block-header__text div p._watcher-view:nth-child(7) {
+    transition-delay: 107ms
+  }
+  .block-header__text div p._watcher-view:nth-child(8) {
+    transition-delay: 108ms
+  }
+  .block-header__text div p._watcher-view:nth-child(9) {
+    transition-delay: 109ms
+  }
+  .block-header__text div p._watcher-view:nth-child(10) {
     transition-delay: .11s
   }
   ul li._watcher-view {
